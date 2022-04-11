@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C27BAC3527E3C7CB0068DEB9"
-               BuildableName = "MVPFramework.app"
+               BuildableName = "Marvel.app"
                BlueprintName = "Marvel"
                ReferencedContainer = "container:Marvel.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C27BAC4E27E3C7CE0068DEB9"
-               BuildableName = "MVPFrameworkTests.xctest"
+               BuildableName = "MarvelTests.xctest"
                BlueprintName = "MarvelTests"
                ReferencedContainer = "container:Marvel.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C27BAC5827E3C7CE0068DEB9"
-               BuildableName = "MVPFrameworkUITests.xctest"
+               BuildableName = "MarvelUITests.xctest"
                BlueprintName = "MarvelUITests"
                ReferencedContainer = "container:Marvel.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C27BAC3527E3C7CB0068DEB9"
-            BuildableName = "MVPFramework.app"
+            BuildableName = "Marvel.app"
             BlueprintName = "Marvel"
             ReferencedContainer = "container:Marvel.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C27BAC3527E3C7CB0068DEB9"
-            BuildableName = "MVPFramework.app"
+            BuildableName = "Marvel.app"
             BlueprintName = "Marvel"
             ReferencedContainer = "container:Marvel.xcodeproj">
          </BuildableReference>
