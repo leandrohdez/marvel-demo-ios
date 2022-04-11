@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="MVPFramework" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Marvel" customModuleProvider="target">
             <connections>
-                <outlet property="demoButton" destination="Npj-tG-cgK" id="y6e-PC-vHu"/>
+                <outlet property="scrollButtonLeadingConstraint" destination="YhS-ZH-vx6" id="4oA-BQ-DZe"/>
+                <outlet property="tableView" destination="kk0-lh-1ZD" id="CMc-rs-hco"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,37 +21,45 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Marvel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmD-Ri-Aot">
-                    <rect key="frame" x="160" y="438" width="95" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npj-tG-cgK">
-                    <rect key="frame" x="20" y="502" width="374" height="50"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="120" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kk0-lh-1ZD">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEB-hB-d1C">
+                    <rect key="frame" x="0.0" y="694" width="48" height="120"/>
+                    <color key="backgroundColor" name="CadmiumRed"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="O8i-kb-KXp"/>
+                        <constraint firstAttribute="height" constant="120" id="09c-MY-csS"/>
+                        <constraint firstAttribute="width" constant="48" id="VKX-Ba-tVT"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Detail"/>
+                    <buttonConfiguration key="configuration" style="plain" image="marvel-vertical"/>
                     <connections>
-                        <action selector="demoButtonTapped" destination="-1" eventType="touchUpInside" id="yqx-zY-d6X"/>
+                        <action selector="scrollButtonTapped" destination="-1" eventType="touchUpInside" id="t9q-cI-t2v"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="White"/>
             <constraints>
-                <constraint firstItem="Npj-tG-cgK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="3Vc-3p-4hI"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Npj-tG-cgK" secondAttribute="trailing" constant="20" id="Bjg-CU-Sfl"/>
-                <constraint firstItem="Npj-tG-cgK" firstAttribute="top" secondItem="zmD-Ri-Aot" secondAttribute="bottom" constant="43.5" id="LYP-De-ciY"/>
-                <constraint firstItem="zmD-Ri-Aot" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Zdt-sW-8j8"/>
-                <constraint firstItem="zmD-Ri-Aot" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="op5-d2-cml"/>
+                <constraint firstAttribute="bottom" secondItem="kk0-lh-1ZD" secondAttribute="bottom" id="0Oe-VO-iwc"/>
+                <constraint firstItem="kk0-lh-1ZD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VAY-zO-fdM"/>
+                <constraint firstItem="UEB-hB-d1C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YhS-ZH-vx6"/>
+                <constraint firstItem="kk0-lh-1ZD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gpS-lc-CcU"/>
+                <constraint firstItem="kk0-lh-1ZD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="lAS-8g-MEH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="UEB-hB-d1C" secondAttribute="bottom" constant="48" id="rhX-to-YOg"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
     <resources>
+        <image name="marvel-vertical" width="48.5" height="100"/>
+        <namedColor name="CadmiumRed">
+            <color red="0.83137254901960778" green="0.011764705882352941" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reuseStoryCellIdentifier" id="gTV-IL-0wX" customClass="StoryCell" customModule="Marvel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="144" height="170"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="144" height="170"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FDt-zy-sJN">
+                        <rect key="frame" x="8" y="0.0" width="128" height="128"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of the comic book serie" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sp-aW-gPp">
+                        <rect key="frame" x="0.0" y="128" width="144" height="42"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="8Sp-aW-gPp" secondAttribute="bottom" id="EP0-cr-9Gj"/>
+                <constraint firstAttribute="trailing" secondItem="8Sp-aW-gPp" secondAttribute="trailing" id="FjA-rM-3bp"/>
+                <constraint firstItem="8Sp-aW-gPp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WiP-yO-hnd"/>
+                <constraint firstAttribute="bottom" secondItem="FDt-zy-sJN" secondAttribute="bottom" constant="42" id="cZf-Cr-Foy"/>
+                <constraint firstItem="FDt-zy-sJN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jb5-Gn-bAv"/>
+                <constraint firstItem="8Sp-aW-gPp" firstAttribute="top" secondItem="FDt-zy-sJN" secondAttribute="bottom" id="lOn-nl-cbZ"/>
+                <constraint firstAttribute="trailing" secondItem="FDt-zy-sJN" secondAttribute="trailing" constant="8" id="pDX-dN-w0s"/>
+                <constraint firstItem="FDt-zy-sJN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="wzS-iH-ya4"/>
+            </constraints>
+            <connections>
+                <outlet property="avatarImageView" destination="FDt-zy-sJN" id="zrc-QI-OWH"/>
+                <outlet property="titleLabel" destination="8Sp-aW-gPp" id="Thz-dz-i2p"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
+        </collectionViewCell>
+    </objects>
+</document>

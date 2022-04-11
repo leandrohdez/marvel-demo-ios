@@ -32,4 +32,16 @@ class SuperHeroDomain {
         }
         useCase.execute()
     }
+    
+    // Top 5 popular super heroes
+    func mostPopulars(completion: @escaping (_ result: PopularHeroesCaseResult) -> Void) {
+        let useCase = PopularHeroesUseCase()
+        useCase.endHandle = { (resultCase) in
+            if let result = resultCase as? PopularHeroesCaseResult {
+                completion(result)
+            }
+        }
+        useCase.execute()
+    }
+    
 }
