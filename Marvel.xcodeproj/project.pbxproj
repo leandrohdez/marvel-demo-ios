@@ -68,6 +68,7 @@
 		C2D9246C2804B7C000CF1AF0 /* Comic_convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D9246B2804B7C000CF1AF0 /* Comic_convenience.swift */; };
 		C2D9246E2804B7D800CF1AF0 /* Serie_convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D9246D2804B7D800CF1AF0 /* Serie_convenience.swift */; };
 		C2D924702804B7F100CF1AF0 /* Story_convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D9246F2804B7F100CF1AF0 /* Story_convenience.swift */; };
+		C2D924722804B90D00CF1AF0 /* HeroUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924712804B90D00CF1AF0 /* HeroUseCase.swift */; };
 		F74E187618E154A971D48D26 /* Pods_Marvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 435C4A6A499FAC4DB88029ED /* Pods_Marvel.framework */; };
 		FEF3ACC47084C83D079889B3 /* Pods_MarvelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E4605636D123D0A71F8038 /* Pods_MarvelTests.framework */; };
 /* End PBXBuildFile section */
@@ -162,6 +163,7 @@
 		C2D9246B2804B7C000CF1AF0 /* Comic_convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic_convenience.swift; sourceTree = "<group>"; };
 		C2D9246D2804B7D800CF1AF0 /* Serie_convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serie_convenience.swift; sourceTree = "<group>"; };
 		C2D9246F2804B7F100CF1AF0 /* Story_convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story_convenience.swift; sourceTree = "<group>"; };
+		C2D924712804B90D00CF1AF0 /* HeroUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroUseCase.swift; sourceTree = "<group>"; };
 		C783467B3AE339E73B8985AC /* Pods_Marvel_MarvelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marvel_MarvelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -331,6 +333,7 @@
 			children = (
 				C2D924642804B6D900CF1AF0 /* SuperHeroDomain.swift */,
 				C2D924662804B6E700CF1AF0 /* HeroesUseCase.swift */,
+				C2D924712804B90D00CF1AF0 /* HeroUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -779,6 +782,7 @@
 				C27BACA227E3D5AC0068DEB9 /* DetailPresenter.swift in Sources */,
 				C2D924222804B07D00CF1AF0 /* APIClient.swift in Sources */,
 				C2D924242804B09C00CF1AF0 /* APILogger.swift in Sources */,
+				C2D924722804B90D00CF1AF0 /* HeroUseCase.swift in Sources */,
 				C2D924372804B2A300CF1AF0 /* ThumbnailResponse.swift in Sources */,
 				C2D9245D2804B66500CF1AF0 /* Hero.swift in Sources */,
 			);

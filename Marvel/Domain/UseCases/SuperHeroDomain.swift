@@ -22,4 +22,14 @@ class SuperHeroDomain {
         useCase.execute()
     }
     
+    // Get hero object from Id of character
+    func hero(id: Int, completion: @escaping (_ result: HeroCaseResult) -> Void) {
+        let useCase = HeroUseCase(id: id)
+        useCase.endHandle = { (resultCase) in
+            if let result = resultCase as? HeroCaseResult {
+                completion(result)
+            }
+        }
+        useCase.execute()
+    }
 }
