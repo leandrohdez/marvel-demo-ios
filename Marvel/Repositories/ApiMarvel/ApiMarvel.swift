@@ -7,16 +7,26 @@
 
 import Foundation
 import SwiftHash
+import Alamofire
 
 class ApiMarvel {
 
     static let shared = ApiMarvel()
     
-    let baseURL = "https://gateway.marvel.com"
+    // properties api
+    let baseURL     = "https://gateway.marvel.com"
     
-    let privateKey = "9f6fb5befd1311be7464147fde699388d68f451c"
+    let privateKey  = "9f6fb5befd1311be7464147fde699388d68f451c"
     
-    let publicKey = "c864b8acb6653f0d5710d4de37a3f246"
+    let publicKey   = "c864b8acb6653f0d5710d4de37a3f246"
+    
+    // http client
+    let httpClient: HttpClient
+    
+    //
+    init(client: HttpClient = HttpClient()) {
+        self.httpClient = client
+    }
     
 }
 

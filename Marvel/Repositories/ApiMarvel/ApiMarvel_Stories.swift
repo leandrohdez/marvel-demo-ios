@@ -39,9 +39,11 @@ extension ApiMarvel {
     open func stories(requestData: CharacterRequest,
                       completion: @escaping (Result<[StoryResponse], Error>) -> Void) {
         
+//        let apiClient = APIClient(session: self.session)
+        
         let endpoint = ApiMarvelEndpoints.stories(requestData)
         
-        APIClient.shared.request(from: endpoint, of: StoryDataWrapperResponse.self) { response in
+        self.httpClient.request(from: endpoint, of: StoryDataWrapperResponse.self) { response in
             
             switch response.result {
                 

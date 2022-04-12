@@ -23,7 +23,6 @@
 		C27BAC9A27E3CE920068DEB9 /* BasePresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27BAC9927E3CE920068DEB9 /* BasePresenterView.swift */; };
 		C27BAC9C27E3CED20068DEB9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27BAC9B27E3CED20068DEB9 /* BaseViewController.swift */; };
 		C2D924202804AE9B00CF1AF0 /* Marvel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2D9241E2804AE9B00CF1AF0 /* Marvel.xcdatamodeld */; };
-		C2D924222804B07D00CF1AF0 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924212804B07D00CF1AF0 /* APIClient.swift */; };
 		C2D924242804B09C00CF1AF0 /* APILogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924232804B09C00CF1AF0 /* APILogger.swift */; };
 		C2D924262804B0AF00CF1AF0 /* APIResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924252804B0AF00CF1AF0 /* APIResponseValidator.swift */; };
 		C2D9242B2804B1E300CF1AF0 /* PaginationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D9242A2804B1E300CF1AF0 /* PaginationRequest.swift */; };
@@ -108,6 +107,9 @@
 		C2D924DE2804EC9600CF1AF0 /* ComicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924DD2804EC9600CF1AF0 /* ComicTest.swift */; };
 		C2D924E02804ECB800CF1AF0 /* SerieTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924DF2804ECB800CF1AF0 /* SerieTest.swift */; };
 		C2D924E22804ECCE00CF1AF0 /* StoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924E12804ECCE00CF1AF0 /* StoryTest.swift */; };
+		C2D924EB280598E700CF1AF0 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924EA280598E700CF1AF0 /* HttpClient.swift */; };
+		C2D924ED2805B0DE00CF1AF0 /* ApiMarvelCharactersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924EC2805B0DE00CF1AF0 /* ApiMarvelCharactersTest.swift */; };
+		C2D924EF2805BAF800CF1AF0 /* MockHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924EE2805BAF800CF1AF0 /* MockHttpClient.swift */; };
 		F74E187618E154A971D48D26 /* Pods_Marvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 435C4A6A499FAC4DB88029ED /* Pods_Marvel.framework */; };
 		FEF3ACC47084C83D079889B3 /* Pods_MarvelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E4605636D123D0A71F8038 /* Pods_MarvelTests.framework */; };
 /* End PBXBuildFile section */
@@ -157,7 +159,6 @@
 		C27BAC9927E3CE920068DEB9 /* BasePresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterView.swift; sourceTree = "<group>"; };
 		C27BAC9B27E3CED20068DEB9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C2D9241F2804AE9B00CF1AF0 /* Marvel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Marvel.xcdatamodel; sourceTree = "<group>"; };
-		C2D924212804B07D00CF1AF0 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		C2D924232804B09C00CF1AF0 /* APILogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILogger.swift; sourceTree = "<group>"; };
 		C2D924252804B0AF00CF1AF0 /* APIResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseValidator.swift; sourceTree = "<group>"; };
 		C2D9242A2804B1E300CF1AF0 /* PaginationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationRequest.swift; sourceTree = "<group>"; };
@@ -242,6 +243,9 @@
 		C2D924DD2804EC9600CF1AF0 /* ComicTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicTest.swift; sourceTree = "<group>"; };
 		C2D924DF2804ECB800CF1AF0 /* SerieTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieTest.swift; sourceTree = "<group>"; };
 		C2D924E12804ECCE00CF1AF0 /* StoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTest.swift; sourceTree = "<group>"; };
+		C2D924EA280598E700CF1AF0 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		C2D924EC2805B0DE00CF1AF0 /* ApiMarvelCharactersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMarvelCharactersTest.swift; sourceTree = "<group>"; };
+		C2D924EE2805BAF800CF1AF0 /* MockHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHttpClient.swift; sourceTree = "<group>"; };
 		C783467B3AE339E73B8985AC /* Pods_Marvel_MarvelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marvel_MarvelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -373,9 +377,10 @@
 		C27BAC6F27E3C8910068DEB9 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				C2D924212804B07D00CF1AF0 /* APIClient.swift */,
+				C2D924EA280598E700CF1AF0 /* HttpClient.swift */,
 				C2D924232804B09C00CF1AF0 /* APILogger.swift */,
 				C2D924252804B0AF00CF1AF0 /* APIResponseValidator.swift */,
+				C2D924EE2805BAF800CF1AF0 /* MockHttpClient.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -679,6 +684,7 @@
 		C2D924CD2804EA4300CF1AF0 /* FastTests */ = {
 			isa = PBXGroup;
 			children = (
+				C2D924E72805962400CF1AF0 /* MockNetworking */,
 				C2D924D02804EA7900CF1AF0 /* Models */,
 				C2D924CF2804EA6800CF1AF0 /* ViewData */,
 			);
@@ -713,6 +719,14 @@
 				C2D924E12804ECCE00CF1AF0 /* StoryTest.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C2D924E72805962400CF1AF0 /* MockNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				C2D924EC2805B0DE00CF1AF0 /* ApiMarvelCharactersTest.swift */,
+			);
+			path = MockNetworking;
 			sourceTree = "<group>";
 		};
 		C9B14D08A2C1863BA3C4B1BC /* Pods */ = {
@@ -983,6 +997,7 @@
 				C2D924932804C46D00CF1AF0 /* ColorsUI.swift in Sources */,
 				C27BAC9827E3CE6C0068DEB9 /* BasePresenter.swift in Sources */,
 				C2D9243B2804B2D000CF1AF0 /* ComicDataWrapperResponse.swift in Sources */,
+				C2D924EF2805BAF800CF1AF0 /* MockHttpClient.swift in Sources */,
 				C27BAC3A27E3C7CB0068DEB9 /* AppDelegate.swift in Sources */,
 				C2D9247F2804C2F200CF1AF0 /* MainHeaderView.swift in Sources */,
 				C2D924652804B6D900CF1AF0 /* SuperHeroDomain.swift in Sources */,
@@ -1025,6 +1040,7 @@
 				C2D924632804B69C00CF1AF0 /* Story.swift in Sources */,
 				C2D9243F2804B2F400CF1AF0 /* ComicResponse.swift in Sources */,
 				C27BAC3C27E3C7CB0068DEB9 /* SceneDelegate.swift in Sources */,
+				C2D924EB280598E700CF1AF0 /* HttpClient.swift in Sources */,
 				C2D924832804C2F200CF1AF0 /* MainHiddenView.swift in Sources */,
 				C2D924A72804C6E700CF1AF0 /* StoryViewData.swift in Sources */,
 				C27BAC9627E3CE500068DEB9 /* Presenter.swift in Sources */,
@@ -1048,7 +1064,6 @@
 				C2D924332804B27900CF1AF0 /* CharacterDataContainerResponse.swift in Sources */,
 				C2D924BF2804C77600CF1AF0 /* ComicMaskView.swift in Sources */,
 				C2D924412804B30500CF1AF0 /* SerieDataWrapperResponse.swift in Sources */,
-				C2D924222804B07D00CF1AF0 /* APIClient.swift in Sources */,
 				C2D9249D2804C65B00CF1AF0 /* AvatarViewData.swift in Sources */,
 				C2D924242804B09C00CF1AF0 /* APILogger.swift in Sources */,
 				C2D924722804B90D00CF1AF0 /* HeroUseCase.swift in Sources */,
@@ -1064,6 +1079,7 @@
 				C2D924D82804EBCC00CF1AF0 /* StoryViewDataTest.swift in Sources */,
 				C2D924E22804ECCE00CF1AF0 /* StoryTest.swift in Sources */,
 				C2D924D62804EB9700CF1AF0 /* SerieViewDataTest.swift in Sources */,
+				C2D924ED2805B0DE00CF1AF0 /* ApiMarvelCharactersTest.swift in Sources */,
 				C2D924E02804ECB800CF1AF0 /* SerieTest.swift in Sources */,
 				C2D924D42804EB2200CF1AF0 /* ComicViewDataTest.swift in Sources */,
 				C2D924DC2804EC6C00CF1AF0 /* HeroTest.swift in Sources */,
