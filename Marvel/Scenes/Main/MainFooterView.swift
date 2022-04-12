@@ -56,7 +56,8 @@ class MainFooterView: UIView {
         context.addLine(to: CGPoint(x: rect.minX, y: rect.minY + self.diagonalDesviation-1))
         context.closePath()
 
-        context.setFillColor(red: 1, green: 1, blue: 1, alpha: 1)
+        UIColor.ui.white.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        context.setFillColor(red: red, green: green, blue: blue, alpha: 1)
         context.fillPath()
           
     }

@@ -66,7 +66,7 @@ class MainViewController: BaseViewController {
         let navigationBarAppearance = UINavigationBarAppearance()
         navigationBarAppearance.configureWithTransparentBackground()
         
-        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.tintColor = UIColor.ui.black
         
         self.navigationItem.scrollEdgeAppearance = navigationBarAppearance
         self.navigationItem.standardAppearance = navigationBarAppearance

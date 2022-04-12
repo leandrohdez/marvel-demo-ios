@@ -36,7 +36,7 @@
                 </label>
                 <activityIndicatorView opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="UbD-oO-Ig8">
                     <rect key="frame" x="150" y="230" width="20" height="20"/>
-                    <color key="color" name="White"/>
+                    <color key="color" name="Snow"/>
                 </activityIndicatorView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="euZ-Ti-l4K">
                     <rect key="frame" x="0.0" y="167" width="320" height="240"/>
@@ -83,8 +83,8 @@
         <namedColor name="CadmiumRed">
             <color red="0.83137254901960778" green="0.011764705882352941" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="White">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Snow">
+            <color red="0.97254901960784312" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
