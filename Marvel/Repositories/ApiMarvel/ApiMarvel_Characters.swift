@@ -39,8 +39,6 @@ extension ApiMarvel {
     open func characters(requestData: PaginationRequest,
                          completion: @escaping (Result<[CharacterResponse], Error>) -> Void) {
         
-//        let apiClient = APIClient(session: self.session)
-        
         let endpoint = ApiMarvelEndpoints.characters(requestData)
         
         self.httpClient.request(from: endpoint, of: CharacterDataWrapperResponse.self) { response in

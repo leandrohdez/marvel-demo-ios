@@ -38,9 +38,7 @@ extension ApiMarvel {
     
     open func comics(requestData: CharacterRequest,
                      completion: @escaping (Result<[ComicResponse], Error>) -> Void) {
-        
-//        let apiClient = APIClient(session: self.session)
-        
+
         let endpoint = ApiMarvelEndpoints.comics(requestData)
         
         self.httpClient.request(from: endpoint, of: ComicDataWrapperResponse.self) { response in

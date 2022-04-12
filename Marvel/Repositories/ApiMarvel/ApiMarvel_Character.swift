@@ -39,8 +39,6 @@ extension ApiMarvel {
     open func character(requestData: CharacterRequest,
                         completion: @escaping (Result<CharacterResponse, Error>) -> Void) {
         
-//        let apiClient = APIClient(session: self.session)
-        
         let endpoint = ApiMarvelEndpoints.character(requestData)
         
         self.httpClient.request(from: endpoint, of: CharacterDataWrapperResponse.self) { response in
@@ -48,8 +46,14 @@ extension ApiMarvel {
             switch response.result {
                 
             case .success(let data):
-                if data.status.uppercased() == "OK", let characterResponse = data.data.results.first {
-                    completion(.success(characterResponse))
+                if data.status.uppercased() == "OK" {
+                    
+                    if let characterResponse = data.data.results.first {
+                        completion(.success(characterResponse))
+                    } else {
+                        completion(.failure(ApiMarvelError.notFound))
+                    }
+                    
                 } else {
                     completion(.failure(ApiMarvelError.invalidData))
                 }

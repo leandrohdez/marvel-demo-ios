@@ -43,7 +43,7 @@ class MockHttpClient: HttpClient {
                 
                 let errorResponseData = DataResponse(
                     request: route.urlRequest,
-                    response: HTTPURLResponse(url: route.urlRequest!.url!, statusCode: 400, httpVersion: nil, headerFields: nil),
+                    response: HTTPURLResponse(url: route.urlRequest!.url!, statusCode: 500, httpVersion: nil, headerFields: nil),
                     data: Data(),
                     metrics: nil,
                     serializationDuration: Date().timeIntervalSinceNow,

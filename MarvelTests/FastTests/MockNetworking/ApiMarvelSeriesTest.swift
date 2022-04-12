@@ -1,5 +1,5 @@
 //
-//  ApiMarvelCharactersTest.swift
+//  ApiMarvelSeriesTest.swift
 //  MarvelTests
 //
 //  Created by Leandro Hernandez on 12/4/22.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import Marvel
 
-class ApiMarvelCharactersTest: XCTestCase {
+class ApiMarvelSeriesTest: XCTestCase {
 
     override func setUpWithError() throws {
         try super.setUpWithError()
@@ -21,21 +21,24 @@ class ApiMarvelCharactersTest: XCTestCase {
 }
 
 // MARK: - Success Serialization
-extension ApiMarvelCharactersTest {
+extension ApiMarvelSeriesTest {
     
     //
     func testServiceMockResponseValid() throws {
         
         // given
+        let characterCaptainAmerica = 1010913
+        let requestData = CharacterRequest(id: characterCaptainAmerica)
+        
         let jsonData = """
-            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 10, "total": 100, "count": 2, "results": [{"id": 1, "name": "String", "description": "String", "thumbnail": {"path": "String", "extension": "String"}, "urls": []}, {"id": 2, "name": "String", "description": "String", "thumbnail": {"path": "String", "extension": "String"}, "urls": []}]}}
+            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 10, "total": 100, "count": 2, "results": [{"id": 1, "title": "String", "thumbnail": {"path": "String", "extension": "String"}}, {"id": 2, "title": "String", "thumbnail": {"path": "String", "extension": "String"}}]}}
         """.data(using: .utf8)!
         
         let apiMarvel = ApiMarvel(client: MockHttpClient(responseMockData: jsonData))
         
         // when
-        let promise = expectation(description: "Fetching Characters Success")
-        apiMarvel.characters(requestData: PaginationRequest(offset: 0, limit: 2)) { result in
+        let promise = expectation(description: "Fetching Series Success")
+        apiMarvel.series(requestData: requestData) { result in
             
             switch result {
                 
@@ -50,11 +53,14 @@ extension ApiMarvelCharactersTest {
         }
         wait(for: [promise], timeout: 1)
     }
-    
+
     //
     func testServiceMockResponseEmptyValid() throws {
         
         // given
+        let characterCaptainAmerica = 1010913
+        let requestData = CharacterRequest(id: characterCaptainAmerica)
+        
         let jsonData = """
             {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 1, "total": 100, "count": 0, "results": []}}
         """.data(using: .utf8)!
@@ -62,8 +68,8 @@ extension ApiMarvelCharactersTest {
         let apiMarvel = ApiMarvel(client: MockHttpClient(responseMockData: jsonData))
         
         // when
-        let promise = expectation(description: "Fetching Empty Characters Success")
-        apiMarvel.characters(requestData: PaginationRequest(offset: 0, limit: 2)) { result in
+        let promise = expectation(description: "Fetching Empty Series Success")
+        apiMarvel.series(requestData: requestData) { result in
             
             switch result {
                 
@@ -76,28 +82,29 @@ extension ApiMarvelCharactersTest {
                 return XCTFail("Error: \(error.localizedDescription)")
             }
         }
-        
         wait(for: [promise], timeout: 1)
     }
-    
 }
 
 // MARK: - Fail Serialization (Missing data)
-extension ApiMarvelCharactersTest {
+extension ApiMarvelSeriesTest {
     
-    // serialization fail - missing: character id
-    func testServiceMockResponseMissingCharacterIdFail() throws {
+    // serialization fail - missing: serie id
+    func testServiceMockResponseMissingSerieIdFail() throws {
         
         // given
+        let characterCaptainAmerica = 1010913
+        let requestData = CharacterRequest(id: characterCaptainAmerica)
+        
         let jsonData = """
-            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 1, "total": 1, "count": 1, "results": [{"name": "String", "description": "String", "thumbnail": {"path": "String", "extension": "String"}, "urls": []}]}}
+            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 10, "total": 100, "count": 1, "results": [{"title": "String", "thumbnail": {"path": "String", "extension": "String"}}]}}
         """.data(using: .utf8)!
         
         let apiMarvel = ApiMarvel(client: MockHttpClient(responseMockData: jsonData))
         
         // when
-        let promise = expectation(description: "Serialization Fail")
-        apiMarvel.characters(requestData: PaginationRequest(offset: 0, limit: 1)) { result in
+        let promise = expectation(description: "Fetching Serialization Fail")
+        apiMarvel.series(requestData: requestData) { result in
             
             switch result {
                 
@@ -113,19 +120,22 @@ extension ApiMarvelCharactersTest {
         wait(for: [promise], timeout: 1)
     }
     
-    // serialization fail - missing: character name
-    func testServiceMockResponseMissingCharacterNameFail() throws {
+    // serialization fail - missing: serie title
+    func testServiceMockResponseMissingSerieTitleFail() throws {
         
         // given
+        let characterCaptainAmerica = 1010913
+        let requestData = CharacterRequest(id: characterCaptainAmerica)
+        
         let jsonData = """
-            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 1, "total": 1, "count": 1, "results": [{"id": 1, "description": "String", "thumbnail": {"path": "String", "extension": "String"}, "urls": []}]}}
+            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 10, "total": 100, "count": 1, "results": [{"id": 1, "thumbnail": {"path": "String", "extension": "String"}}]}}
         """.data(using: .utf8)!
         
         let apiMarvel = ApiMarvel(client: MockHttpClient(responseMockData: jsonData))
         
         // when
-        let promise = expectation(description: "Serialization Fail")
-        apiMarvel.characters(requestData: PaginationRequest(offset: 0, limit: 1)) { result in
+        let promise = expectation(description: "Fetching Serialization Fail")
+        apiMarvel.series(requestData: requestData) { result in
             
             switch result {
                 
@@ -141,19 +151,22 @@ extension ApiMarvelCharactersTest {
         wait(for: [promise], timeout: 1)
     }
     
-    // serialization fail - missing: character description
-    func testServiceMockResponseMissingCharacterDescriptionFail() throws {
+    // serialization fail - missing: serie thumbnail
+    func testServiceMockResponseMissingSerieThumbnailFail() throws {
         
         // given
+        let characterCaptainAmerica = 1010913
+        let requestData = CharacterRequest(id: characterCaptainAmerica)
+        
         let jsonData = """
-            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 1, "total": 1, "count": 1, "results": [{"id": 1, "name": "String", "thumbnail": {"path": "String", "extension": "String"}, "urls": []}]}}
+            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 10, "total": 100, "count": 1, "results": [{"id": 1, "title": "String", "thumbnail": {}}]}}
         """.data(using: .utf8)!
         
         let apiMarvel = ApiMarvel(client: MockHttpClient(responseMockData: jsonData))
         
         // when
-        let promise = expectation(description: "Serialization Fail")
-        apiMarvel.characters(requestData: PaginationRequest(offset: 0, limit: 1)) { result in
+        let promise = expectation(description: "Fetching Serialization Fail")
+        apiMarvel.series(requestData: requestData) { result in
             
             switch result {
                 
@@ -169,47 +182,22 @@ extension ApiMarvelCharactersTest {
         wait(for: [promise], timeout: 1)
     }
     
-    // serialization fail - missing: thumbnail object
-    func testServiceMockResponseMissingThumbnailObjectFail() throws {
+    // serialization fail - missing: serie thumbnail
+    func testServiceMockResponseMissingSerieThumbnail02Fail() throws {
         
         // given
+        let characterCaptainAmerica = 1010913
+        let requestData = CharacterRequest(id: characterCaptainAmerica)
+        
         let jsonData = """
-            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 1, "total": 1, "count": 1, "results": [{"id": 1, "name": "String", "description": "String", "urls": []}]}}
+            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 10, "total": 100, "count": 1, "results": [{"id": 1, "title": "String"}]}}
         """.data(using: .utf8)!
         
         let apiMarvel = ApiMarvel(client: MockHttpClient(responseMockData: jsonData))
         
         // when
-        let promise = expectation(description: "Serialization Fail")
-        apiMarvel.characters(requestData: PaginationRequest(offset: 0, limit: 1)) { result in
-            
-            switch result {
-                
-            case .success(_):
-                return XCTFail("Invalid JSON, should failed")
-                
-            case .failure(_):
-                // then
-                XCTAssertTrue(true)
-                promise.fulfill()
-            }
-        }
-        wait(for: [promise], timeout: 1)
-    }
-    
-    // serialization fail - missing: url array
-    func testServiceMockResponseMissingUrlsArrayFail() throws {
-        
-        // given
-        let jsonData = """
-            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 1, "total": 1, "count": 1, "results": [{"id": 1, "name": "String", "description": "String", "thumbnail": {"path": "String", "extension": "String"}}]}}
-        """.data(using: .utf8)!
-        
-        let apiMarvel = ApiMarvel(client: MockHttpClient(responseMockData: jsonData))
-        
-        // when
-        let promise = expectation(description: "Serialization Fail")
-        apiMarvel.characters(requestData: PaginationRequest(offset: 0, limit: 1)) { result in
+        let promise = expectation(description: "Fetching Serialization Fail")
+        apiMarvel.series(requestData: requestData) { result in
             
             switch result {
                 
@@ -228,21 +216,23 @@ extension ApiMarvelCharactersTest {
 }
 
 // MARK: - Fail Serialization (Invalid type)
-extension ApiMarvelCharactersTest {
+extension ApiMarvelSeriesTest {
     
-    // serialization fail - invalid type: character id
-    func testServiceMockResponseInvalidTypeCharacterIdFail() throws {
-        
+    // serialization fail - invalid type: serie id
+    func testServiceMockResponseInvalidTypeSerieIdFail() throws {
         // given
+        let characterCaptainAmerica = 1010913
+        let requestData = CharacterRequest(id: characterCaptainAmerica)
+        
         let jsonData = """
-            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 1, "total": 1, "count": 1, "results": [{"id": "1", "name": "String", "description": "String", "thumbnail": {"path": "String", "extension": "String"}, "urls": []}]}}
+            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 10, "total": 100, "count": 1, "results": [{"id": "1", "title": "String", "thumbnail": {"path": "String", "extension": "String"}}]}}
         """.data(using: .utf8)!
         
         let apiMarvel = ApiMarvel(client: MockHttpClient(responseMockData: jsonData))
         
         // when
-        let promise = expectation(description: "Serialization Fail")
-        apiMarvel.characters(requestData: PaginationRequest(offset: 0, limit: 1)) { result in
+        let promise = expectation(description: "Fetching Serialization Fail")
+        apiMarvel.series(requestData: requestData) { result in
             
             switch result {
                 
@@ -258,19 +248,21 @@ extension ApiMarvelCharactersTest {
         wait(for: [promise], timeout: 1)
     }
     
-    // serialization fail - invalid type: character urls
-    func testServiceMockResponseInvalidTypeCharacterUrlsFail() throws {
-        
+    // serialization fail - invalid type: serie title
+    func testServiceMockResponseInvalidTypeSerieTitleFail() throws {
         // given
+        let characterCaptainAmerica = 1010913
+        let requestData = CharacterRequest(id: characterCaptainAmerica)
+        
         let jsonData = """
-            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 1, "total": 1, "count": 1, "results": [{"id": 1, "name": "String", "description": "String", "thumbnail": {"path": "String", "extension": "String"}, "urls": {}}]}}
+            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 10, "total": 100, "count": 1, "results": [{"id": 1, "title": true, "thumbnail": {"path": "String", "extension": "String"}}]}}
         """.data(using: .utf8)!
         
         let apiMarvel = ApiMarvel(client: MockHttpClient(responseMockData: jsonData))
         
         // when
-        let promise = expectation(description: "Serialization Fail")
-        apiMarvel.characters(requestData: PaginationRequest(offset: 0, limit: 1)) { result in
+        let promise = expectation(description: "Fetching Serialization Fail")
+        apiMarvel.series(requestData: requestData) { result in
             
             switch result {
                 
@@ -286,19 +278,21 @@ extension ApiMarvelCharactersTest {
         wait(for: [promise], timeout: 1)
     }
     
-    // serialization fail - invalid type: character urls
-    func testServiceMockResponseInvalidTypeCharacterUrls02Fail() throws {
-        
+    // serialization fail - invalid type: serie thumbnail
+    func testServiceMockResponseInvalidTypeSerieThumbnailFail() throws {
         // given
+        let characterCaptainAmerica = 1010913
+        let requestData = CharacterRequest(id: characterCaptainAmerica)
+        
         let jsonData = """
-            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 1, "total": 1, "count": 1, "results": [{"id": 1, "name": "String", "description": "String", "thumbnail": {"path": "String", "extension": "String"}, "urls": "String"}]}}
+            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 10, "total": 100, "count": 1, "results": [{"id": 1, "title": "String", "thumbnail": [{"path": "String", "extension": "String"}]}]}}
         """.data(using: .utf8)!
         
         let apiMarvel = ApiMarvel(client: MockHttpClient(responseMockData: jsonData))
         
         // when
-        let promise = expectation(description: "Serialization Fail")
-        apiMarvel.characters(requestData: PaginationRequest(offset: 0, limit: 1)) { result in
+        let promise = expectation(description: "Fetching Serialization Fail")
+        apiMarvel.series(requestData: requestData) { result in
             
             switch result {
                 
@@ -314,4 +308,33 @@ extension ApiMarvelCharactersTest {
         wait(for: [promise], timeout: 1)
     }
     
+    // serialization fail - invalid type: serie thumbnail
+    func testServiceMockResponseInvalidTypeSerieThumbnail02Fail() throws {
+        // given
+        let characterCaptainAmerica = 1010913
+        let requestData = CharacterRequest(id: characterCaptainAmerica)
+        
+        let jsonData = """
+            {"code": 200, "status": "OK", "data": {"offset": 0, "limit": 10, "total": 100, "count": 1, "results": [{"id": 1, "title": "String", "thumbnail": {"path": 99, "extension": "String"}}]}}
+        """.data(using: .utf8)!
+        
+        let apiMarvel = ApiMarvel(client: MockHttpClient(responseMockData: jsonData))
+        
+        // when
+        let promise = expectation(description: "Fetching Serialization Fail")
+        apiMarvel.series(requestData: requestData) { result in
+            
+            switch result {
+                
+            case .success(_):
+                return XCTFail("Invalid JSON, should failed")
+                
+            case .failure(_):
+                // then
+                XCTAssertTrue(true)
+                promise.fulfill()
+            }
+        }
+        wait(for: [promise], timeout: 1)
+    }
 }

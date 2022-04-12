@@ -16,7 +16,7 @@ class PopularHeroesUseCase: BaseUseCase {
     
     private let heroTop1: Int = 1009146     // Abomination
     
-    private let heroTop2: Int = 1010801     // AntMan
+    private let heroTop2: Int = 1010913     // Captain America
     
     private let heroTop3: Int = 1009184     // Black Bolt
     
