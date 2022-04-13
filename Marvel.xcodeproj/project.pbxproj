@@ -297,6 +297,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C26E10102806EB550062DEF2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C27BAC6E27E3C8780068DEB9 /* Repositories */,
+				C27BAC6F27E3C8910068DEB9 /* Networking */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		C27BAC2D27E3C7CB0068DEB9 = {
 			isa = PBXGroup;
 			children = (
@@ -326,10 +335,9 @@
 				C27BAC3927E3C7CB0068DEB9 /* AppDelegate.swift */,
 				C27BAC3B27E3C7CB0068DEB9 /* SceneDelegate.swift */,
 				C27BAC8527E3CBAF0068DEB9 /* Core */,
-				C27BAC6C27E3C84F0068DEB9 /* Scenes */,
+				C27BAC6C27E3C84F0068DEB9 /* Presentation */,
 				C27BAC6D27E3C85D0068DEB9 /* Domain */,
-				C27BAC6E27E3C8780068DEB9 /* Repositories */,
-				C27BAC6F27E3C8910068DEB9 /* Networking */,
+				C26E10102806EB550062DEF2 /* Data */,
 				C27BAC7027E3C8B80068DEB9 /* Helpers */,
 				C27BAC7127E3C8DC0068DEB9 /* Resources */,
 				C2D9241E2804AE9B00CF1AF0 /* Marvel.xcdatamodeld */,
@@ -355,14 +363,14 @@
 			path = MarvelUITests;
 			sourceTree = "<group>";
 		};
-		C27BAC6C27E3C84F0068DEB9 /* Scenes */ = {
+		C27BAC6C27E3C84F0068DEB9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				C27BAC8B27E3CD080068DEB9 /* Common */,
 				C27BAC8327E3CAF00068DEB9 /* Main */,
 				C27BAC8427E3CAFC0068DEB9 /* Detail */,
 			);
-			path = Scenes;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		C27BAC6D27E3C85D0068DEB9 /* Domain */ = {
