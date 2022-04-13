@@ -114,6 +114,7 @@
 		C2D924F32805D8C700CF1AF0 /* ApiMarvelComicsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924F22805D8C700CF1AF0 /* ApiMarvelComicsTest.swift */; };
 		C2D924F52805E40600CF1AF0 /* ApiMarvelSeriesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924F42805E40600CF1AF0 /* ApiMarvelSeriesTest.swift */; };
 		C2D924F72805E59000CF1AF0 /* ApiMarvelStoriesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924F62805E59000CF1AF0 /* ApiMarvelStoriesTest.swift */; };
+		C2D924F92805F79400CF1AF0 /* ApiMarvelGenericResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924F82805F79400CF1AF0 /* ApiMarvelGenericResponseTest.swift */; };
 		F74E187618E154A971D48D26 /* Pods_Marvel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 435C4A6A499FAC4DB88029ED /* Pods_Marvel.framework */; };
 		FEF3ACC47084C83D079889B3 /* Pods_MarvelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E4605636D123D0A71F8038 /* Pods_MarvelTests.framework */; };
 /* End PBXBuildFile section */
@@ -254,6 +255,7 @@
 		C2D924F22805D8C700CF1AF0 /* ApiMarvelComicsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMarvelComicsTest.swift; sourceTree = "<group>"; };
 		C2D924F42805E40600CF1AF0 /* ApiMarvelSeriesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMarvelSeriesTest.swift; sourceTree = "<group>"; };
 		C2D924F62805E59000CF1AF0 /* ApiMarvelStoriesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMarvelStoriesTest.swift; sourceTree = "<group>"; };
+		C2D924F82805F79400CF1AF0 /* ApiMarvelGenericResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMarvelGenericResponseTest.swift; sourceTree = "<group>"; };
 		C783467B3AE339E73B8985AC /* Pods_Marvel_MarvelUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marvel_MarvelUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -368,7 +370,7 @@
 			children = (
 				C27BAC7A27E3C9980068DEB9 /* Core */,
 				C27BAC7927E3C9820068DEB9 /* UseCases */,
-				C27BAC7827E3C9710068DEB9 /* Models */,
+				C27BAC7827E3C9710068DEB9 /* Entities */,
 				C2D924682804B74900CF1AF0 /* Extensions */,
 			);
 			path = Domain;
@@ -413,7 +415,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		C27BAC7827E3C9710068DEB9 /* Models */ = {
+		C27BAC7827E3C9710068DEB9 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				C2D9245C2804B66500CF1AF0 /* Hero.swift */,
@@ -421,7 +423,7 @@
 				C2D924602804B68C00CF1AF0 /* Serie.swift */,
 				C2D924622804B69C00CF1AF0 /* Story.swift */,
 			);
-			path = Models;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		C27BAC7927E3C9820068DEB9 /* UseCases */ = {
@@ -693,7 +695,7 @@
 			isa = PBXGroup;
 			children = (
 				C2D924E72805962400CF1AF0 /* MockNetworking */,
-				C2D924D02804EA7900CF1AF0 /* Models */,
+				C2D924D02804EA7900CF1AF0 /* Entities */,
 				C2D924CF2804EA6800CF1AF0 /* ViewData */,
 			);
 			path = FastTests;
@@ -718,7 +720,7 @@
 			path = ViewData;
 			sourceTree = "<group>";
 		};
-		C2D924D02804EA7900CF1AF0 /* Models */ = {
+		C2D924D02804EA7900CF1AF0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				C2D924DB2804EC6C00CF1AF0 /* HeroTest.swift */,
@@ -726,7 +728,7 @@
 				C2D924DF2804ECB800CF1AF0 /* SerieTest.swift */,
 				C2D924E12804ECCE00CF1AF0 /* StoryTest.swift */,
 			);
-			path = Models;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		C2D924E72805962400CF1AF0 /* MockNetworking */ = {
@@ -737,6 +739,7 @@
 				C2D924F22805D8C700CF1AF0 /* ApiMarvelComicsTest.swift */,
 				C2D924F42805E40600CF1AF0 /* ApiMarvelSeriesTest.swift */,
 				C2D924F62805E59000CF1AF0 /* ApiMarvelStoriesTest.swift */,
+				C2D924F82805F79400CF1AF0 /* ApiMarvelGenericResponseTest.swift */,
 			);
 			path = MockNetworking;
 			sourceTree = "<group>";
@@ -1097,6 +1100,7 @@
 				C2D924E02804ECB800CF1AF0 /* SerieTest.swift in Sources */,
 				C2D924D42804EB2200CF1AF0 /* ComicViewDataTest.swift in Sources */,
 				C2D924DC2804EC6C00CF1AF0 /* HeroTest.swift in Sources */,
+				C2D924F92805F79400CF1AF0 /* ApiMarvelGenericResponseTest.swift in Sources */,
 				C2D924F52805E40600CF1AF0 /* ApiMarvelSeriesTest.swift in Sources */,
 				C2D924D22804EAB300CF1AF0 /* HeroViewDataTest.swift in Sources */,
 				C2D924DE2804EC9600CF1AF0 /* ComicTest.swift in Sources */,
