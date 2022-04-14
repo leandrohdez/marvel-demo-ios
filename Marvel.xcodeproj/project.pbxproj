@@ -39,6 +39,18 @@
 		C2B2873128083552005529D0 /* MockApiMarvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2873028083552005529D0 /* MockApiMarvel.swift */; };
 		C2B2873328083AEF005529D0 /* HeroUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2873228083AEF005529D0 /* HeroUseCaseTest.swift */; };
 		C2B2873528084404005529D0 /* TopFiveUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2873428084404005529D0 /* TopFiveUseCaseTest.swift */; };
+		C2B287382808499B005529D0 /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B287372808499B005529D0 /* MainPresenterTest.swift */; };
+		C2B2873B28085ED1005529D0 /* MockHeroesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2873A28085ED1005529D0 /* MockHeroesUseCase.swift */; };
+		C2B2873D28086088005529D0 /* MockUseCaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2873C28086088005529D0 /* MockUseCaseError.swift */; };
+		C2B2873F280860E0005529D0 /* MockMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2873E280860E0005529D0 /* MockMainController.swift */; };
+		C2B287412808611C005529D0 /* MockTopFiveUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B287402808611C005529D0 /* MockTopFiveUseCase.swift */; };
+		C2B28743280870AB005529D0 /* MockHeroUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B28742280870AB005529D0 /* MockHeroUseCase.swift */; };
+		C2B28745280871CA005529D0 /* MockDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B28744280871CA005529D0 /* MockDetailController.swift */; };
+		C2B2874728087244005529D0 /* DetailPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2874628087244005529D0 /* DetailPresenterTest.swift */; };
+		C2B2874D28089DD8005529D0 /* MainViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2874C28089DD8005529D0 /* MainViewControllerTest.swift */; };
+		C2B2874F28089E7C005529D0 /* MockMainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2874E28089E7C005529D0 /* MockMainPresenter.swift */; };
+		C2B287512808A8E7005529D0 /* MockDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B287502808A8E7005529D0 /* MockDetailPresenter.swift */; };
+		C2B287532808AC83005529D0 /* DetailViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B287522808AC83005529D0 /* DetailViewControllerTest.swift */; };
 		C2D924202804AE9B00CF1AF0 /* Marvel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2D9241E2804AE9B00CF1AF0 /* Marvel.xcdatamodeld */; };
 		C2D924242804B09C00CF1AF0 /* APILogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924232804B09C00CF1AF0 /* APILogger.swift */; };
 		C2D924262804B0AF00CF1AF0 /* APIResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924252804B0AF00CF1AF0 /* APIResponseValidator.swift */; };
@@ -193,6 +205,18 @@
 		C2B2873028083552005529D0 /* MockApiMarvel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiMarvel.swift; sourceTree = "<group>"; };
 		C2B2873228083AEF005529D0 /* HeroUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroUseCaseTest.swift; sourceTree = "<group>"; };
 		C2B2873428084404005529D0 /* TopFiveUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopFiveUseCaseTest.swift; sourceTree = "<group>"; };
+		C2B287372808499B005529D0 /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
+		C2B2873A28085ED1005529D0 /* MockHeroesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHeroesUseCase.swift; sourceTree = "<group>"; };
+		C2B2873C28086088005529D0 /* MockUseCaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUseCaseError.swift; sourceTree = "<group>"; };
+		C2B2873E280860E0005529D0 /* MockMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainController.swift; sourceTree = "<group>"; };
+		C2B287402808611C005529D0 /* MockTopFiveUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTopFiveUseCase.swift; sourceTree = "<group>"; };
+		C2B28742280870AB005529D0 /* MockHeroUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHeroUseCase.swift; sourceTree = "<group>"; };
+		C2B28744280871CA005529D0 /* MockDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailController.swift; sourceTree = "<group>"; };
+		C2B2874628087244005529D0 /* DetailPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTest.swift; sourceTree = "<group>"; };
+		C2B2874C28089DD8005529D0 /* MainViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTest.swift; sourceTree = "<group>"; };
+		C2B2874E28089E7C005529D0 /* MockMainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainPresenter.swift; sourceTree = "<group>"; };
+		C2B287502808A8E7005529D0 /* MockDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailPresenter.swift; sourceTree = "<group>"; };
+		C2B287522808AC83005529D0 /* DetailViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTest.swift; sourceTree = "<group>"; };
 		C2D9241F2804AE9B00CF1AF0 /* Marvel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Marvel.xcdatamodel; sourceTree = "<group>"; };
 		C2D924232804B09C00CF1AF0 /* APILogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILogger.swift; sourceTree = "<group>"; };
 		C2D924252804B0AF00CF1AF0 /* APIResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseValidator.swift; sourceTree = "<group>"; };
@@ -618,8 +642,27 @@
 			children = (
 				C2D924EE2805BAF800CF1AF0 /* MockHttpClient.swift */,
 				C2B2873028083552005529D0 /* MockApiMarvel.swift */,
+				C2B287402808611C005529D0 /* MockTopFiveUseCase.swift */,
+				C2B2873A28085ED1005529D0 /* MockHeroesUseCase.swift */,
+				C2B28742280870AB005529D0 /* MockHeroUseCase.swift */,
+				C2B2873C28086088005529D0 /* MockUseCaseError.swift */,
+				C2B2873E280860E0005529D0 /* MockMainController.swift */,
+				C2B28744280871CA005529D0 /* MockDetailController.swift */,
+				C2B2874E28089E7C005529D0 /* MockMainPresenter.swift */,
+				C2B287502808A8E7005529D0 /* MockDetailPresenter.swift */,
 			);
 			path = MockObjects;
+			sourceTree = "<group>";
+		};
+		C2B2873628084984005529D0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C2B287372808499B005529D0 /* MainPresenterTest.swift */,
+				C2B2874628087244005529D0 /* DetailPresenterTest.swift */,
+				C2B2874C28089DD8005529D0 /* MainViewControllerTest.swift */,
+				C2B287522808AC83005529D0 /* DetailViewControllerTest.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		C2D924272804B19D00CF1AF0 /* ApiMarvel */ = {
@@ -780,6 +823,7 @@
 		C2D924CD2804EA4300CF1AF0 /* FastTests */ = {
 			isa = PBXGroup;
 			children = (
+				C2B2873628084984005529D0 /* Presentation */,
 				C2B2872C28082FA7005529D0 /* UseCases */,
 				C2D924E72805962400CF1AF0 /* MockDataAndNetworking */,
 				C2D924D02804EA7900CF1AF0 /* Entities */,
@@ -1187,8 +1231,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2B2873F280860E0005529D0 /* MockMainController.swift in Sources */,
 				C2D924F12805D23800CF1AF0 /* ApiMarvelCharacterTest.swift in Sources */,
+				C2B2874F28089E7C005529D0 /* MockMainPresenter.swift in Sources */,
 				C2D924D82804EBCC00CF1AF0 /* StoryViewDataTest.swift in Sources */,
+				C2B28743280870AB005529D0 /* MockHeroUseCase.swift in Sources */,
 				C2D924E22804ECCE00CF1AF0 /* StoryTest.swift in Sources */,
 				C2B2873328083AEF005529D0 /* HeroUseCaseTest.swift in Sources */,
 				C2D924F32805D8C700CF1AF0 /* ApiMarvelComicsTest.swift in Sources */,
@@ -1196,16 +1243,25 @@
 				C2D924D62804EB9700CF1AF0 /* SerieViewDataTest.swift in Sources */,
 				C2D924ED2805B0DE00CF1AF0 /* ApiMarvelCharactersTest.swift in Sources */,
 				C2D924E02804ECB800CF1AF0 /* SerieTest.swift in Sources */,
+				C2B2874D28089DD8005529D0 /* MainViewControllerTest.swift in Sources */,
+				C2B2874728087244005529D0 /* DetailPresenterTest.swift in Sources */,
 				C2B2872F280830E4005529D0 /* HeroesUseCaseTest.swift in Sources */,
+				C2B28745280871CA005529D0 /* MockDetailController.swift in Sources */,
+				C2B287412808611C005529D0 /* MockTopFiveUseCase.swift in Sources */,
 				C2D924D42804EB2200CF1AF0 /* ComicViewDataTest.swift in Sources */,
+				C2B287382808499B005529D0 /* MainPresenterTest.swift in Sources */,
+				C2B2873D28086088005529D0 /* MockUseCaseError.swift in Sources */,
 				C2D924DC2804EC6C00CF1AF0 /* HeroTest.swift in Sources */,
 				C2D924F92805F79400CF1AF0 /* ApiMarvelGenericResponseTest.swift in Sources */,
 				C2B2873128083552005529D0 /* MockApiMarvel.swift in Sources */,
+				C2B287532808AC83005529D0 /* DetailViewControllerTest.swift in Sources */,
+				C2B2873B28085ED1005529D0 /* MockHeroesUseCase.swift in Sources */,
 				C2D924F52805E40600CF1AF0 /* ApiMarvelSeriesTest.swift in Sources */,
 				C2D924D22804EAB300CF1AF0 /* HeroViewDataTest.swift in Sources */,
 				C2D924DE2804EC9600CF1AF0 /* ComicTest.swift in Sources */,
 				C2D924DA2804EC1300CF1AF0 /* HeroDetailViewDataTest.swift in Sources */,
 				C2D924F72805E59000CF1AF0 /* ApiMarvelStoriesTest.swift in Sources */,
+				C2B287512808A8E7005529D0 /* MockDetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

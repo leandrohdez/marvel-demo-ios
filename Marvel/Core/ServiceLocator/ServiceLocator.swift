@@ -19,7 +19,6 @@ class ServiceLocator {
     private var registry = [ObjectIdentifier: Any]()
     
     static func registerModules() {
-        
         sharedLocator.registerModules([
             MainDIContainerServiceLocator()
         ])

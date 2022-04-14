@@ -34,6 +34,8 @@ class MainPresenter: BasePresenter {
     
     private var heroes: [Hero] = []
     
+    private var mostPupularHeroes: [Hero] = []
+    
     //
     init(view: MainPresenterView, usecases: UseCases) {
         self.view = view
@@ -67,7 +69,7 @@ extension MainPresenter {
     
     //
     func detailAction(heroId: Int) {
-        guard let hero = self.heroes.first(where: { $0.id == heroId }) else { return }
+        guard let hero = (self.heroes + self.mostPupularHeroes).first(where: { $0.id == heroId }) else { return }
         self.navigateToDetail(hero: hero)
     }
     
@@ -123,6 +125,8 @@ extension MainPresenter {
             switch result {
                 
             case .success(let output):
+                
+                self.mostPupularHeroes = output.heroes
                 
                 let heroesViewData: [HeroViewData] = output.heroes.map {
                     HeroViewData(
