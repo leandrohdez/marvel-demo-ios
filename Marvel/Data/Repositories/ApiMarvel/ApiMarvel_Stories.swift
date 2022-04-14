@@ -11,9 +11,9 @@ import Alamofire
 extension ApiMarvel {
     
     /**
-     Series
+     Stories
      
-     Fetches series of comics about of character.
+     Fetches stories of comics about of character.
 
      How to use?
      =======================

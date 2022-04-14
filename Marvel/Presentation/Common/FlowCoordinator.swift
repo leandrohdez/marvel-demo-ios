@@ -1,5 +1,5 @@
 //
-//  RouterController.swift
+//  FlowCoordinator.swift
 //  Marvel
 //
 //  Created by Leandro Hernandez on 11/4/22.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class RouterController {
+class FlowCoordinator {
     
     private let sender: BaseViewController
     

@@ -9,7 +9,7 @@ import Foundation
 import SwiftHash
 import Alamofire
 
-class ApiMarvel {
+class ApiMarvel: ApiMarvelRepository {
 
     static let shared = ApiMarvel()
     

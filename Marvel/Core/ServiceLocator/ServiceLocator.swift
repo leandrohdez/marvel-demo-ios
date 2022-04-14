@@ -21,7 +21,7 @@ class ServiceLocator {
     static func registerModules() {
         
         sharedLocator.registerModules([
-            MainServiceLocator()
+            MainDIContainerServiceLocator()
         ])
     }
     

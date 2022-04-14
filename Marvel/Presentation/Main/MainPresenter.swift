@@ -14,9 +14,18 @@ protocol MainPresenterView: BasePresenterView {
 
 class MainPresenter: BasePresenter {
     
+    // view dependency
     private weak var view: MainPresenterView?
     
-    //
+    // use case dependencies
+    struct UseCases {
+        let heroes: HeroesUseCaseProtocol
+        let topFive: TopFiveUseCaseProtocol
+    }
+    
+    private let usecases: UseCases
+    
+    // Properties
     private var isAllowLoadMore: Bool = true
     
     private var pageIndex: Int = 0
@@ -26,8 +35,9 @@ class MainPresenter: BasePresenter {
     private var heroes: [Hero] = []
     
     //
-    init(view: MainPresenterView) {
+    init(view: MainPresenterView, usecases: UseCases) {
         self.view = view
+        self.usecases = usecases
     }
     
     override func viewDidLoad() {
@@ -71,17 +81,19 @@ extension MainPresenter {
         
         guard let view = self.view else { return }
         
+        let input = HeroesUseCaseInput(pageIndex: self.pageIndex, pageLength: self.pageLength)
+        
         view.startLoading()
-        SuperHeroDomain.UseCases.heroes(pageIndex: self.pageIndex, pageLength: self.pageLength) { result in
+        self.usecases.heroes.execute(input: input) { result in
             view.stopLoading()
             
             switch result {
                 
-            case .success(let heroes):
+            case .success(let output):
                 
-                self.heroes += heroes
-                
-                let heroesViewData: [HeroViewData] = heroes.map {
+                self.heroes += output.heroes
+
+                let heroesViewData: [HeroViewData] = output.heroes.map {
                     HeroViewData(
                         id: $0.id,
                         name: $0.name,
@@ -89,13 +101,13 @@ extension MainPresenter {
                         description: $0.description
                     )
                 }
-                
+
                 view.performHeroes(heroesViewData: heroesViewData)
-                
+
                 // [] means no more items
-                self.isAllowLoadMore = (heroes.count > 0)
- 
-            case .unknownError:
+                self.isAllowLoadMore = (output.heroes.count > 0)
+                
+            case .failure(_):
                 view.showMessage(title: "Something bad happened", text: "Never miss an error message.")
             }
         }
@@ -103,13 +115,16 @@ extension MainPresenter {
     
     //
     private func fetchMostPupularHeroes() {
+        
         guard let view = self.view else { return }
-        SuperHeroDomain.UseCases.mostPopulars { result in
+        
+        self.usecases.topFive.execute { result in
             
             switch result {
-            case .success(let heroes):
                 
-                let heroesViewData: [HeroViewData] = heroes.map {
+            case .success(let output):
+                
+                let heroesViewData: [HeroViewData] = output.heroes.map {
                     HeroViewData(
                         id: $0.id,
                         name: $0.name,
@@ -119,6 +134,9 @@ extension MainPresenter {
                 }
                 
                 view.performMostPopularHeroes(heroesViewData: heroesViewData)
+                
+            case .failure(_):
+                break
             }
         }
     }
@@ -131,7 +149,7 @@ extension MainPresenter {
     //
     private func navigateToDetail(hero: Hero) {
         guard let view = self.view as? MainViewController else { return }
-        RouterController(from: view).pushDetailViewController(hero: hero)
+        FlowCoordinator(from: view).pushDetailViewController(hero: hero)
     }
     
 }
