@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Road_Rage.otf">
+            <string>RoadRage</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseHeroCellIdentifier" rowHeight="160" id="KGk-i7-Jjw" customClass="HeroCell" customModule="Marvel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2KU-Fh-yH2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                        <color key="backgroundColor" name="Cultured"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHC-gV-Rxd" customClass="GradientView" customModule="Marvel" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super Hero" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yc4-Wc-OcZ">
+                        <rect key="frame" x="16" y="106" width="288" height="38"/>
+                        <fontDescription key="fontDescription" name="RoadRage" family="Road Rage" pointSize="24"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cC2-TA-5Eh" customClass="ComicMaskView" customModule="Marvel" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="offset">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="leftRigth" value="YES"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                <color key="value" name="White"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GxL-qq-bwj" customClass="ComicMaskView" customModule="Marvel" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="offset">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="leftRigth" value="NO"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                <color key="value" name="White"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="iHC-gV-Rxd" secondAttribute="bottom" id="2Ym-hW-skb"/>
+                    <constraint firstAttribute="bottom" secondItem="yc4-Wc-OcZ" secondAttribute="bottom" constant="16" id="3A0-sS-bq5"/>
+                    <constraint firstItem="cC2-TA-5Eh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5bC-PR-gcy"/>
+                    <constraint firstItem="iHC-gV-Rxd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6nq-iq-kIW"/>
+                    <constraint firstItem="cC2-TA-5Eh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6wV-9t-TLQ"/>
+                    <constraint firstItem="GxL-qq-bwj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="CAq-Vs-qzT"/>
+                    <constraint firstAttribute="bottom" secondItem="cC2-TA-5Eh" secondAttribute="bottom" id="F8o-3g-HIy"/>
+                    <constraint firstItem="2KU-Fh-yH2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Q8a-09-ZrK"/>
+                    <constraint firstItem="yc4-Wc-OcZ" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="RFO-IO-Aj9"/>
+                    <constraint firstAttribute="bottom" secondItem="GxL-qq-bwj" secondAttribute="bottom" id="Tqx-TS-hmi"/>
+                    <constraint firstAttribute="trailing" secondItem="iHC-gV-Rxd" secondAttribute="trailing" id="WH3-m4-0ua"/>
+                    <constraint firstItem="iHC-gV-Rxd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WKA-bd-lfu"/>
+                    <constraint firstItem="yc4-Wc-OcZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="XDI-Tg-gMf"/>
+                    <constraint firstAttribute="trailing" secondItem="cC2-TA-5Eh" secondAttribute="trailing" id="cfc-YW-GZH"/>
+                    <constraint firstAttribute="bottom" secondItem="2KU-Fh-yH2" secondAttribute="bottom" id="hCZ-IE-jZR"/>
+                    <constraint firstAttribute="trailing" secondItem="GxL-qq-bwj" secondAttribute="trailing" id="pD8-ZD-Lgw"/>
+                    <constraint firstItem="2KU-Fh-yH2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="rzJ-73-avA"/>
+                    <constraint firstItem="GxL-qq-bwj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="tmj-CO-5pX"/>
+                    <constraint firstAttribute="trailing" secondItem="2KU-Fh-yH2" secondAttribute="trailing" id="xZh-KB-3yX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avatarImageView" destination="2KU-Fh-yH2" id="RYR-Ge-w5x"/>
+                <outlet property="comicMaskView1" destination="cC2-TA-5Eh" id="OBM-Ke-HoO"/>
+                <outlet property="comicMaskView2" destination="GxL-qq-bwj" id="TLN-S4-b3W"/>
+                <outlet property="nameLabel" destination="yc4-Wc-OcZ" id="aHy-75-CU2"/>
+                <outlet property="shadowView" destination="iHC-gV-Rxd" id="4Vs-Bf-6NS"/>
+            </connections>
+            <point key="canvasLocation" x="327.536231884058" y="152.67857142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Cultured">
+            <color red="0.92500001192092896" green="0.92500001192092896" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

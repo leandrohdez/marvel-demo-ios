@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MainHeaderView" customModule="Marvel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marvel-logo" translatesAutoresizingMaskIntoConstraints="NO" id="AD2-el-KnJ">
+                    <rect key="frame" x="24" y="24" width="160" height="72"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="72" id="cdI-Mq-Ndg"/>
+                        <constraint firstAttribute="width" constant="160" id="vcL-4a-rfx"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MOST POPULARS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCU-RN-D3n">
+                    <rect key="frame" x="24" y="132" width="157.5" height="23"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHARACTERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWX-FW-CAG">
+                    <rect key="frame" x="24" y="441" width="124" height="23"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="UbD-oO-Ig8">
+                    <rect key="frame" x="150" y="230" width="20" height="20"/>
+                    <color key="color" name="Snow"/>
+                </activityIndicatorView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="euZ-Ti-l4K">
+                    <rect key="frame" x="0.0" y="167" width="320" height="240"/>
+                    <color key="backgroundColor" name="CadmiumRed"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="mZT-gl-Ocr"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XP3-mq-ghq">
+                        <size key="itemSize" width="144" height="266"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="CadmiumRed"/>
+            <constraints>
+                <constraint firstItem="euZ-Ti-l4K" firstAttribute="top" secondItem="fCU-RN-D3n" secondAttribute="bottom" constant="12" id="A3L-mi-39z"/>
+                <constraint firstItem="fCU-RN-D3n" firstAttribute="top" secondItem="AD2-el-KnJ" secondAttribute="bottom" constant="36" id="Jmi-Me-XAY"/>
+                <constraint firstItem="euZ-Ti-l4K" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="T8u-2P-aVu"/>
+                <constraint firstItem="euZ-Ti-l4K" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="U0d-OH-k0B"/>
+                <constraint firstItem="ZWX-FW-CAG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="aOL-1o-Xex"/>
+                <constraint firstItem="UbD-oO-Ig8" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="gqR-Ns-hOe"/>
+                <constraint firstItem="fCU-RN-D3n" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="oeb-16-0sE"/>
+                <constraint firstItem="AD2-el-KnJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="qcH-qm-Br7"/>
+                <constraint firstItem="AD2-el-KnJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="rJ7-bS-is7"/>
+                <constraint firstItem="UbD-oO-Ig8" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="vJx-XB-159"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ZWX-FW-CAG" secondAttribute="bottom" constant="16" id="xHL-nG-ReF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="logoImageView" destination="AD2-el-KnJ" id="ZlA-vo-31W"/>
+                <outlet property="mainTitleLabel" destination="ZWX-FW-CAG" id="tyq-f7-FQR"/>
+                <outlet property="popularTitleLabel" destination="fCU-RN-D3n" id="eIA-ag-3Bs"/>
+                <outlet property="popularsCollectionView" destination="euZ-Ti-l4K" id="y3e-EA-rPT"/>
+                <outlet property="spinerIndicator" destination="UbD-oO-Ig8" id="Zyt-rw-wsF"/>
+            </connections>
+            <point key="canvasLocation" x="127.5" y="205.98591549295776"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="marvel-logo" width="597" height="271"/>
+        <namedColor name="CadmiumRed">
+            <color red="0.83137254901960778" green="0.011764705882352941" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Snow">
+            <color red="0.97254901960784312" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
