@@ -781,7 +781,7 @@
 			isa = PBXGroup;
 			children = (
 				C2B2872C28082FA7005529D0 /* UseCases */,
-				C2D924E72805962400CF1AF0 /* MockNetworking */,
+				C2D924E72805962400CF1AF0 /* MockDataAndNetworking */,
 				C2D924D02804EA7900CF1AF0 /* Entities */,
 				C2D924CF2804EA6800CF1AF0 /* ViewData */,
 			);
@@ -818,7 +818,7 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		C2D924E72805962400CF1AF0 /* MockNetworking */ = {
+		C2D924E72805962400CF1AF0 /* MockDataAndNetworking */ = {
 			isa = PBXGroup;
 			children = (
 				C2D924EC2805B0DE00CF1AF0 /* ApiMarvelCharactersTest.swift */,
@@ -828,7 +828,7 @@
 				C2D924F62805E59000CF1AF0 /* ApiMarvelStoriesTest.swift */,
 				C2D924F82805F79400CF1AF0 /* ApiMarvelGenericResponseTest.swift */,
 			);
-			path = MockNetworking;
+			path = MockDataAndNetworking;
 			sourceTree = "<group>";
 		};
 		C9B14D08A2C1863BA3C4B1BC /* Pods */ = {
