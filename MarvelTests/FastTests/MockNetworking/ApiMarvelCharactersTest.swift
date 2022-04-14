@@ -76,7 +76,6 @@ extension ApiMarvelCharactersTest {
                 return XCTFail("Error: \(error.localizedDescription)")
             }
         }
-        
         wait(for: [promise], timeout: 1)
     }
     

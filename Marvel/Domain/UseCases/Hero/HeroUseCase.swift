@@ -98,8 +98,8 @@ extension HeroUseCase {
 
                     seal.fulfill(comics)
 
-                case .failure(let error):
-                    seal.reject(error)
+                case .failure(_):
+                    seal.fulfill([])
                 }
             }
         }
@@ -123,8 +123,8 @@ extension HeroUseCase {
 
                     seal.fulfill(series)
 
-                case .failure(let error):
-                    seal.reject(error)
+                case .failure(_):
+                    seal.fulfill([])
                 }
             }
         }
@@ -148,8 +148,8 @@ extension HeroUseCase {
 
                     seal.fulfill(stories)
 
-                case .failure(let error):
-                    seal.reject(error)
+                case .failure(_):
+                    seal.fulfill([])
                 }
             }
         }
