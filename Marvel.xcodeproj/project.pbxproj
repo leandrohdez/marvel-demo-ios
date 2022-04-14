@@ -51,6 +51,14 @@
 		C2B2874F28089E7C005529D0 /* MockMainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2874E28089E7C005529D0 /* MockMainPresenter.swift */; };
 		C2B287512808A8E7005529D0 /* MockDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B287502808A8E7005529D0 /* MockDetailPresenter.swift */; };
 		C2B287532808AC83005529D0 /* DetailViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B287522808AC83005529D0 /* DetailViewControllerTest.swift */; };
+		C2B287562808BA7E005529D0 /* ApiMarvelCharactersSlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B287552808BA7D005529D0 /* ApiMarvelCharactersSlowTest.swift */; };
+		C2B287582808BAF2005529D0 /* ApiMarvelCharacterSlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B287572808BAF2005529D0 /* ApiMarvelCharacterSlowTest.swift */; };
+		C2B2875A2808BB59005529D0 /* ApiMarvelComicsSlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B287592808BB59005529D0 /* ApiMarvelComicsSlowTest.swift */; };
+		C2B2875C2808BB84005529D0 /* ApiMarvelSeriesSlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2875B2808BB84005529D0 /* ApiMarvelSeriesSlowTest.swift */; };
+		C2B2875E2808BBB6005529D0 /* ApiMarvelStoriesSlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2875D2808BBB6005529D0 /* ApiMarvelStoriesSlowTest.swift */; };
+		C2B287612808BC4C005529D0 /* HeroesUseCaseSlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B287602808BC4C005529D0 /* HeroesUseCaseSlowTest.swift */; };
+		C2B287632808BDF7005529D0 /* HeroUseCaseSlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B287622808BDF7005529D0 /* HeroUseCaseSlowTest.swift */; };
+		C2B287652808C050005529D0 /* TopFiveUseCaseSlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B287642808C050005529D0 /* TopFiveUseCaseSlowTest.swift */; };
 		C2D924202804AE9B00CF1AF0 /* Marvel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2D9241E2804AE9B00CF1AF0 /* Marvel.xcdatamodeld */; };
 		C2D924242804B09C00CF1AF0 /* APILogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924232804B09C00CF1AF0 /* APILogger.swift */; };
 		C2D924262804B0AF00CF1AF0 /* APIResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D924252804B0AF00CF1AF0 /* APIResponseValidator.swift */; };
@@ -217,6 +225,14 @@
 		C2B2874E28089E7C005529D0 /* MockMainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMainPresenter.swift; sourceTree = "<group>"; };
 		C2B287502808A8E7005529D0 /* MockDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailPresenter.swift; sourceTree = "<group>"; };
 		C2B287522808AC83005529D0 /* DetailViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTest.swift; sourceTree = "<group>"; };
+		C2B287552808BA7D005529D0 /* ApiMarvelCharactersSlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMarvelCharactersSlowTest.swift; sourceTree = "<group>"; };
+		C2B287572808BAF2005529D0 /* ApiMarvelCharacterSlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMarvelCharacterSlowTest.swift; sourceTree = "<group>"; };
+		C2B287592808BB59005529D0 /* ApiMarvelComicsSlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMarvelComicsSlowTest.swift; sourceTree = "<group>"; };
+		C2B2875B2808BB84005529D0 /* ApiMarvelSeriesSlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMarvelSeriesSlowTest.swift; sourceTree = "<group>"; };
+		C2B2875D2808BBB6005529D0 /* ApiMarvelStoriesSlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMarvelStoriesSlowTest.swift; sourceTree = "<group>"; };
+		C2B287602808BC4C005529D0 /* HeroesUseCaseSlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesUseCaseSlowTest.swift; sourceTree = "<group>"; };
+		C2B287622808BDF7005529D0 /* HeroUseCaseSlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroUseCaseSlowTest.swift; sourceTree = "<group>"; };
+		C2B287642808C050005529D0 /* TopFiveUseCaseSlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopFiveUseCaseSlowTest.swift; sourceTree = "<group>"; };
 		C2D9241F2804AE9B00CF1AF0 /* Marvel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Marvel.xcdatamodel; sourceTree = "<group>"; };
 		C2D924232804B09C00CF1AF0 /* APILogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILogger.swift; sourceTree = "<group>"; };
 		C2D924252804B0AF00CF1AF0 /* APIResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseValidator.swift; sourceTree = "<group>"; };
@@ -665,6 +681,28 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		C2B287542808BA4E005529D0 /* ProductionApiMarvel */ = {
+			isa = PBXGroup;
+			children = (
+				C2B287552808BA7D005529D0 /* ApiMarvelCharactersSlowTest.swift */,
+				C2B287572808BAF2005529D0 /* ApiMarvelCharacterSlowTest.swift */,
+				C2B287592808BB59005529D0 /* ApiMarvelComicsSlowTest.swift */,
+				C2B2875B2808BB84005529D0 /* ApiMarvelSeriesSlowTest.swift */,
+				C2B2875D2808BBB6005529D0 /* ApiMarvelStoriesSlowTest.swift */,
+			);
+			path = ProductionApiMarvel;
+			sourceTree = "<group>";
+		};
+		C2B2875F2808BC2D005529D0 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				C2B287602808BC4C005529D0 /* HeroesUseCaseSlowTest.swift */,
+				C2B287622808BDF7005529D0 /* HeroUseCaseSlowTest.swift */,
+				C2B287642808C050005529D0 /* TopFiveUseCaseSlowTest.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		C2D924272804B19D00CF1AF0 /* ApiMarvel */ = {
 			isa = PBXGroup;
 			children = (
@@ -835,6 +873,8 @@
 		C2D924CE2804EA4D00CF1AF0 /* SlowTests */ = {
 			isa = PBXGroup;
 			children = (
+				C2B2875F2808BC2D005529D0 /* UseCases */,
+				C2B287542808BA4E005529D0 /* ProductionApiMarvel */,
 			);
 			path = SlowTests;
 			sourceTree = "<group>";
@@ -1237,7 +1277,9 @@
 				C2D924D82804EBCC00CF1AF0 /* StoryViewDataTest.swift in Sources */,
 				C2B28743280870AB005529D0 /* MockHeroUseCase.swift in Sources */,
 				C2D924E22804ECCE00CF1AF0 /* StoryTest.swift in Sources */,
+				C2B287612808BC4C005529D0 /* HeroesUseCaseSlowTest.swift in Sources */,
 				C2B2873328083AEF005529D0 /* HeroUseCaseTest.swift in Sources */,
+				C2B287632808BDF7005529D0 /* HeroUseCaseSlowTest.swift in Sources */,
 				C2D924F32805D8C700CF1AF0 /* ApiMarvelComicsTest.swift in Sources */,
 				C2B2873528084404005529D0 /* TopFiveUseCaseTest.swift in Sources */,
 				C2D924D62804EB9700CF1AF0 /* SerieViewDataTest.swift in Sources */,
@@ -1247,20 +1289,26 @@
 				C2B2874728087244005529D0 /* DetailPresenterTest.swift in Sources */,
 				C2B2872F280830E4005529D0 /* HeroesUseCaseTest.swift in Sources */,
 				C2B28745280871CA005529D0 /* MockDetailController.swift in Sources */,
+				C2B287562808BA7E005529D0 /* ApiMarvelCharactersSlowTest.swift in Sources */,
+				C2B2875C2808BB84005529D0 /* ApiMarvelSeriesSlowTest.swift in Sources */,
 				C2B287412808611C005529D0 /* MockTopFiveUseCase.swift in Sources */,
 				C2D924D42804EB2200CF1AF0 /* ComicViewDataTest.swift in Sources */,
 				C2B287382808499B005529D0 /* MainPresenterTest.swift in Sources */,
 				C2B2873D28086088005529D0 /* MockUseCaseError.swift in Sources */,
+				C2B287582808BAF2005529D0 /* ApiMarvelCharacterSlowTest.swift in Sources */,
+				C2B2875A2808BB59005529D0 /* ApiMarvelComicsSlowTest.swift in Sources */,
 				C2D924DC2804EC6C00CF1AF0 /* HeroTest.swift in Sources */,
 				C2D924F92805F79400CF1AF0 /* ApiMarvelGenericResponseTest.swift in Sources */,
 				C2B2873128083552005529D0 /* MockApiMarvel.swift in Sources */,
 				C2B287532808AC83005529D0 /* DetailViewControllerTest.swift in Sources */,
+				C2B2875E2808BBB6005529D0 /* ApiMarvelStoriesSlowTest.swift in Sources */,
 				C2B2873B28085ED1005529D0 /* MockHeroesUseCase.swift in Sources */,
 				C2D924F52805E40600CF1AF0 /* ApiMarvelSeriesTest.swift in Sources */,
 				C2D924D22804EAB300CF1AF0 /* HeroViewDataTest.swift in Sources */,
 				C2D924DE2804EC9600CF1AF0 /* ComicTest.swift in Sources */,
 				C2D924DA2804EC1300CF1AF0 /* HeroDetailViewDataTest.swift in Sources */,
 				C2D924F72805E59000CF1AF0 /* ApiMarvelStoriesTest.swift in Sources */,
+				C2B287652808C050005529D0 /* TopFiveUseCaseSlowTest.swift in Sources */,
 				C2B287512808A8E7005529D0 /* MockDetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
