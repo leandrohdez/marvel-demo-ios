@@ -3,8 +3,8 @@
 
 Aplicación iOS de ejemplo que hace uso del api de Marvel: (https://developer.marvel.com/docs)
 
-| Autor                | Leandro Hernández (leandro.hdez@hotmail.com)                                              |
 |----------------------|-------------------------------------------------------------------------------------------|
+| Autor                | Leandro Hernández (leandro.hdez@hotmail.com)                                              |
 |                      | https://swiftme-portfolio.web.app/                                                        |
 | iOS Target           | iOS 15                                                                                    |
 | XCode versión        | XCode 13.2.1                                                                              |
