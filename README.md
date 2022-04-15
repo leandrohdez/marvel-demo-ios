@@ -158,4 +158,44 @@ En el proyecto Marvel he creado 3 grupos de pruebas:
 - **Pruebas de interfaz:** Como su nombre lo indica tienen como objetivo probar los elementos de interacciones del usuario de forma automatizada. Como el desarrollo de Marvel es un ejemplo sencillo de 2 pantallas con pocas interacciones y navegaciones no salen muchos casos de pruebas de este tipo. 
 
 A continuación, se puede observar la organización de las pruebas en el proyecto: 
+
+<img src="README_FILES/xcode-folders-03.png" alt="XCode Project Folders" width="300" />
+
+Las pruebas están implementadas siguiendo los principios: FIRST: (https://crysol.org/recipe/2011-05-03/principios-first.html)
+
+Al ejecutar las pruebas del proyecto se debe obtener un resultado parecido a este: 
+
+<img src="README_FILES/xcode-folders-02.png" alt="XCode Project Tests" width="300" />
+
+Si bien no se tiene una cobertura total, considero en este caso que son Test suficientes para una versión de ejemplo. 
+
+
+## Recomendaciones y consideraciones 
+
+No quería terminar sin antes dejar algunas recomendaciones que podrían mejorar el proyecto.  
+
+Hay que tener en cuenta, que he trabajado teniendo presente que es un proyecto de ejemplo, y por tanto no tiene sentido dedicar demasiadas horas a su perfeccionamiento. Al contrario, lo que se intenta representar es el desarrollo de un trabajo de ingeniería de software, técnicas aplicadas, limpieza, arquitecturas, etc. 
+
+Si se desea continuar perfeccionando el proyecto propondría: 
+
+- Crear un sistema de caché para evitar llamadas a la API innecesarias. Esto se podría hacer usando CoreData (que dejé planteado dentro del proyecto, aunque no se usa). 
+- Mejorar aspectos visuales de las pantallas. 
+- Crear más UnitTest y UITest para garantizar mayor cobertura de pruebas en el código.  
+- Implementar un Caso de Uso para buscar superhéroe a partir del nombre. 
+
  
+## Resumen y gestión del proyecto 
+
+Por último, dejo un resumen tiempo de trabajo empleado. 
+
+| **Tareas**                                           |  **Tiempo empleado**  |
+|------------------------------------------------------|:---------------------:|
+| Implementando patrón de arquitectura MVP             |        3 horas        |
+| Implementando la capa  Networking                    |         1 hora        |
+| Implementando los servicios para llamar a  ApiMarvel |        3 horas        |
+| Implementando los Modelos y Casos de Uso             |        2 horas        |
+| Desacoplando capas                                   |         1 hora        |
+| Implementando elementos UX/UI                        |        4 horas        |
+| Implementando Test Unitarios                         |        4 horas        |
+| Documentación del proyecto                           |        2 horas        |
+| **Total**                                            | **20 horas (aprox.)** |
