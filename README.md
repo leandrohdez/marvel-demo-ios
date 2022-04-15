@@ -3,6 +3,15 @@
 
 Aplicación iOS de ejemplo que hace uso del api de Marvel: (https://developer.marvel.com/docs)
 
+| Autor                | Leandro Hernández (leandro.hdez@hotmail.com)                                              |
+|----------------------|-------------------------------------------------------------------------------------------|
+|                      | https://swiftme-portfolio.web.app/                                                        |
+| iOS Target           | iOS 15                                                                                    |
+| XCode versión        | XCode 13.2.1                                                                              |
+| Dispositivo empleado | iPhone 12, iOS15 (Simulador)                                                              |
+| Código fuente        | Github: https://github.com/leandrohdez/marvel-demo-ios                                    |
+| Dependencias         | Requiere instalar las librerías de dependencias usando  Cocoapods: https://cocoapods.org/ |
+
 
 ## Arquitectura
 
