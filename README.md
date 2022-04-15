@@ -53,7 +53,7 @@ Para las características del proyecto Marvel he decidido implementar un patrón
 
 **Model-View-Presenter (MVP)**
 
-<img src="README_FILES/mvp.png" alt="Model-View-Presenter" width="300" />
+<img src="README_FILES/mvp.png" alt="Model-View-Presenter" width="450" />
 
 En cualquier caso, se implementa desacopladas que permita a futuro cambiar el patrón de arquitectura sin afectar demasiado el funcionamiento. 
 
@@ -124,3 +124,38 @@ Ya que el desarrollo es un ejemplo, no buscaré dedicar demasiadas horas a perfe
 - Para el diseño de vistas utilizo XIB files que luego inyecto a una clase que la gestiona. 
 - Creo un contenedor de recursos con: Imágenes, Colores y Fuentes personalizadas. 
 - También siempre es bueno crear elementos que sorprendan al usuario. Existe algún elemento oculto. 
+
+Finalmente queda así:
+
+<img src="README_FILES/poster.png" alt="Poster" width="800" />
+
+
+## Frameworks empleados 
+
+Para el desarrollo del ejemplo he hecho uso de algunos frameworks externos que ayudan a la implementación. Para la instalación de estos framewoks he utilizado Cocoapods como gestor de dependencia. 
+
+Los frameworks son: 
+
+- **Alamofire:** Para gestionar las comunicaciones HTTP. 
+
+- **AlamofireImage:** Para gestionar las comunicaciones HTTP orientadas a la carga asíncronas de las imágenes de forma remota. 
+
+- **PromiseKit:** Framework que ayuda al trabajo con promesas. Sobre todo, para emplear en las lógicas de casos de uso haciendo su implementación más limpia, más legible, evitando las concatenaciones de clausuras. También mejora la implementación de ejecuciones en paralelo. 
+
+- **SwiftHash:** Para las comunicaciones con la API de Marvel hay que crear un hash con varios parámetros. Esta librería me ayudará a esta tarea. 
+
+
+## Test 
+
+El desarrollo de Test dentro de un proyecto es una tarea ardua, pero necesaria para proteger el código de posibles afectaciones que pueden surgir a partir de cambios o evolutivos realizados. Nos permite detectar a tiempo problemas que a priori no son sencillos de ver. 
+
+En el proyecto Marvel he creado 3 grupos de pruebas: 
+
+- **Pruebas rápidas:** Conjunto de pruebas unitarias que establecen criterios de validación para el funcionamiento de componentes de forma unitaria. En otras palabras, contienen lógicas de simulación del entorno para probar de forma independiente los principales componentes de código del software. Se clasifican como pruebas rápidas ya que se pueden ejecutar el conjunto de pruebas en un tiempo razonable sin depender de tiempos de espera externos a la aplicación. 
+
+- **Pruebas lentas:** Conjunto de pruebas unitarias que establecen criterios de validación para el funcionamiento de varios componentes interconectados. La principal diferencia de las pruebas lentas y las rápidas radica en que en las pruebas rápidas no existe entorno simulado, sino que se intenta realizar conexiones reales y por lo tanto hay dependencia de los tiempos de respuesta de servicios externos. Si bien no son el sistema de pruebas más recomendado ya que exige tener conexión real a las APIs y contaminan el entorno de trabajo, en ocasiones pueden ser útiles. Como el desarrollo de Marvel es un ejemplo académico he decidido incluir algunas. 
+
+- **Pruebas de interfaz:** Como su nombre lo indica tienen como objetivo probar los elementos de interacciones del usuario de forma automatizada. Como el desarrollo de Marvel es un ejemplo sencillo de 2 pantallas con pocas interacciones y navegaciones no salen muchos casos de pruebas de este tipo. 
+
+A continuación, se puede observar la organización de las pruebas en el proyecto: 
+ 
