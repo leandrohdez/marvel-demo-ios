@@ -25,7 +25,7 @@ Responsable realizar las solicitudes de datos a las fuentes de información. En 
 
 De forma general, podemos representar las interacciones así: 
 
-![(Presentación) - (Lógicas de negocio) - (Acceso a datos)](README_FILES/multilayer.png)
+<img src="README_FILES/multilayer.png" alt="(Presentación) - (Lógicas de negocio) - (Acceso a datos)" width="600" />
 
 Esta arquitectura permite delegar responsabilidades únicas a los objetos en distintos niveles de jerarquía. La idea principal es que se pueda desarrollar una acción concreta del negocio interviniendo los objetos necesarios para su correcto desempeño.  
 
@@ -33,7 +33,7 @@ Para caso de uso del negocio intervienen únicamente los objetos responsables pa
 
 A continuación, se muestra de forma más detallada la interacción entre objetos de las distintas capas. 
 
-![(Presentation Layer: Scenes) - (Business logics Layer: Use cases) - (Data access Layer: Repositories)](README_FILES/objects-layers.png)
+<img src="README_FILES/objects-layers.png" alt="(Presentation Layer: Scenes) - (Business logics Layer: Use cases) - (Data access Layer: Repositories)" width="800" />
 
 En el proyecto se puede ver que está organizado de acuerdo con la arquitectura multicapas propuesta.
 
