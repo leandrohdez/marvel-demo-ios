@@ -37,7 +37,7 @@ A continuación, se muestra de forma más detallada la interacción entre objeto
 
 En el proyecto se puede ver que está organizado de acuerdo con la arquitectura multicapas propuesta.
 
-<img src="README_FILES/xcode-folders-01.png" alt="XCode Project Folders" width="100" />
+<img src="README_FILES/xcode-folders-01.png" alt="XCode Project Folders" width="300" />
 
 ## Patrón de arquitectura MVP 
 
