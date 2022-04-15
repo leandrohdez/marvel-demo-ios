@@ -209,3 +209,5 @@ Por último, dejo un resumen tiempo de trabajo empleado.
 | Implementando Test Unitarios                         |        4 horas        |
 | Documentación del proyecto                           |        2 horas        |
 | **Total**                                            | **20 horas (aprox.)** |
+
+> **Nota:**  Los tiempos son orientativos, no son precisos. 
