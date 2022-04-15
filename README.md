@@ -3,6 +3,7 @@
 
 Aplicación iOS de ejemplo que hace uso del api de Marvel: (https://developer.marvel.com/docs)
 
+
 ## Arquitectura
 
 El proyecto se ha diseñado en una arquitectura multicapas que definen los niveles de responsabilidad sobre las funcionalidades de la aplicación. Cada una de estas capas o niveles contiene un conjunto de clases con responsabilidades relacionadas con la capa a la que pertenecen. 
@@ -39,6 +40,7 @@ En el proyecto se puede ver que está organizado de acuerdo con la arquitectura 
 
 <img src="README_FILES/xcode-folders-01.png" alt="XCode Project Folders" width="300" />
 
+
 ## Patrón de arquitectura MVP 
 
 Se debe elegir cuidadosamente un patrón de arquitectura adecuado a las características del proyecto. 
@@ -47,4 +49,49 @@ En una arquitectura multicapas por responsabilidades todas las capas son muy imp
 
 Para las características del proyecto Marvel he decidido implementar un patrón de arquitectura Model-View-Presenter (MVP) ya que es un patrón muy limpio sin demasiada redundancia de objetos, lo que lo hace perfecto para esta implementación. 
 
+> **Nota:** También he valorado otros patrones de arquitectura, por ejemplo, **Model-View-ViewModel (MVVM)** pero como finalmente no usaremos el lenguaje SwiftUI o componentes usando paradigma reactivo no es el patrón más recomendable para este caso. 
 
+**Model-View-Presenter (MVP)**
+
+<img src="README_FILES/mvp.png" alt="Model-View-Presenter" width="300" />
+
+En cualquier caso, se implementa desacopladas que permita a futuro cambiar el patrón de arquitectura sin afectar demasiado el funcionamiento. 
+
+
+## Principios SOLID 
+
+Son principios de buenas prácticas de programación que actúan como guía o ruta para hacer mejores implementaciones. Aunque desde un sentido práctico no es obligatorio seguirlos al pie de la letra, es importante comprender las bases y aplicar aquellas recomendaciones que mejoren el proyecto. 
+
+En el caso de proyecto Marvel he aplicado algunas de las importantes recomendaciones en SOLID, por ejemplo: 
+
+- **Principio de responsabilidad única:** Evito en el proyecto construir objetos extensos con más de una responsabilidad. Siempre diseñaremos objetos con una funcionalidad muy concreta y que se pueda desarrollar en una cantidad de código aceptable. Si fuese muy grande la funcionalidad sería mejor separarla en varias. 
+
+- **Principio de Open-Close:** Las clases del proyecto basados en este principio siempre serán Cerradas a modificaciones, pero Abiertas a extensiones. Siempre se extenderán objetos para nuevas funcionalidades de forma tal que se mantenga la simplicidad del objeto original. Entre otras cosas esto nos permitirá que nos posibles refactors no impliquen afectaciones en muchas partes del proyecto. 
+
+- **Principio de Alta cohesión y bajo acoplamiento:** Es importante que los objetos del proyecto actúen como piezas dentro de un engranaje perfecto en el software. Pero siempre vigilamos que la interacción entre estas piezas evite el acoplamiento fuerte entre ellas. Esto me permitirá en determinados momentos modificar incluso sustituir las piezas sin demasiado problemas. Para conseguir esto implemento objetos de interfaces, que actúen como contratos que conecten las distintas capas. 
+
+- **Principio de Liskov:** Emplear clases o interfaces abstractas para definir los objetos de roles fundamentales en la aplicación. Esto ayudará también al desacoplamiento de las capas. 
+
+**Inyectando dependencias (DI)**
+
+Como en un proyecto los objetos tienen dependencias unos con otros, en aras de garantizar la alta cohesión y el bajo acoplamiento empleo la Inyección de dependencia como instrumento de poder tener control sobre quién y cómo depende de cada objeto. Esto me ayudará a aplicar modificaciones futuras al proyecto, así como para construcción de Test Unitarios. 
+
+Las técnicas aplicadas para las inyecciones de dependencias son: 
+
+- ServiceLocator 
+- Dependency Injection Container 
+- Dependency Injection Initialization 
+
+
+## Funcionalidades de la app 
+
+En términos generales la aplicación las funcionalidades: 
+
+- Ver los superhéroes más populares (funcionalidad inventada) 
+- Ver todos los superhéroes de Marvel 
+- Ver el detalle de un superhéroe. 
+- Para un superhéroe dado ver todos sus comics. 
+- Para un superhéroe dado ver todas sus series. 
+- Para un superhéroe dado ver todos sus stories. 
+
+Se pueden ver representados en este diagrama de casos de uso de negocio: 
