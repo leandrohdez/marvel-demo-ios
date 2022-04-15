@@ -95,3 +95,32 @@ En términos generales la aplicación las funcionalidades:
 - Para un superhéroe dado ver todos sus stories. 
 
 Se pueden ver representados en este diagrama de casos de uso de negocio: 
+
+<img src="README_FILES/use-cases.png" alt="Use cases" width="500" />
+
+
+## UX/UI 
+
+Partiendo de la base que conozco muy poco sobre el mundo de los superhéroes hay que dedicar un momento a pensar sobre el contexto de la aplicación y hacia qué público está orientada, para conseguir la mejor experiencia posible. 
+
+Buscando en Google he encontrado algún patrón visual que me puede ayudar como base para la UI de la app. Se puede ver como para los comics se emplean frames irregulares y muy coloridos.  
+
+<img src="README_FILES/comic-frames.png" alt="Comic frames" width="400" />
+
+Usando esta técnica como guía he desarrollado un prototipo de interfaz (herramienta Figma) aplicando esta idea. 
+
+<img src="README_FILES/wireframe.png" alt="Wireframe" width="800" />
+
+Uso la herramienta (https://coolors.co/) para generar una paleta de colores para trabajar: 
+
+<img src="README_FILES/colors.png" alt="Colors" width="400" />
+
+Ya que el desarrollo es un ejemplo, no buscaré dedicar demasiadas horas a perfeccionar los aspectos visuales, pero mantendré un mínimo de trabajo para cuidar la UX/UI como, por ejemplo: 
+
+- Todas las interacciones con la interfaz estarán enfocadas en preservar la experiencia que ya tienen los usuarios en el entorno Apple y con dispositivo Apple. 
+- Soporte para el Dark Mode. 
+- Se utiliza en framework de Apple UIKit. 
+- A modo general los componentes usados son: UILabel, UITableView, UICollectionView, UIView, etc. 
+- Para el diseño de vistas utilizo XIB files que luego inyecto a una clase que la gestiona. 
+- Creo un contenedor de recursos con: Imágenes, Colores y Fuentes personalizadas. 
+- También siempre es bueno crear elementos que sorprendan al usuario. Existe algún elemento oculto. 
