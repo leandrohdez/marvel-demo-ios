@@ -10,7 +10,7 @@ Aplicación iOS de ejemplo que hace uso del api de Marvel: (https://developer.ma
 | iOS Target           | iOS 15                                                                                    |
 | XCode versión        | XCode 13.2.1                                                                              |
 | Dispositivo empleado | iPhone 12, iOS15 (Simulador)                                                              |
-| Código fuente        | Github: https://github.com/leandrohdez/marvel-demo-ios                                    |
+| Código fuente        | Github: https://github.com/leandrohdez/marvel-demo-ios  Rama: master (main)               |
 | Dependencias         | Requiere instalar las librerías de dependencias usando  Cocoapods: https://cocoapods.org/ |
 
 
