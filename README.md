@@ -76,7 +76,7 @@ En el caso de proyecto Marvel he aplicado algunas de las importantes recomendaci
 
 - **Principio de responsabilidad única:** Evito en el proyecto construir objetos extensos con más de una responsabilidad. Siempre diseñaremos objetos con una funcionalidad muy concreta y que se pueda desarrollar en una cantidad de código aceptable. Si fuese muy grande la funcionalidad sería mejor separarla en varias. 
 
-- **Principio de Open-Close:** Las clases del proyecto basados en este principio siempre serán Cerradas a modificaciones, pero Abiertas a extensiones. Siempre se extenderán objetos para nuevas funcionalidades de forma tal que se mantenga la simplicidad del objeto original. Entre otras cosas esto nos permitirá que nos posibles refactors no impliquen afectaciones en muchas partes del proyecto. 
+- **Principio de Open-Close:** Las clases del proyecto basados en este principio siempre serán Cerradas a modificaciones, pero Abiertas a extensiones. Siempre se extenderán objetos para nuevas funcionalidades de forma tal que se mantenga la simplicidad del objeto original. Entre otras cosas esto nos permitirá que los posibles refactors no impliquen afectaciones en muchas partes del proyecto. 
 
 - **Principio de Alta cohesión y bajo acoplamiento:** Es importante que los objetos del proyecto actúen como piezas dentro de un engranaje perfecto en el software. Pero siempre vigilamos que la interacción entre estas piezas evite el acoplamiento fuerte entre ellas. Esto me permitirá en determinados momentos modificar incluso sustituir las piezas sin demasiado problemas. Para conseguir esto implemento objetos de interfaces, que actúen como contratos que conecten las distintas capas. 
 
