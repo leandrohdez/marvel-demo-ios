@@ -95,7 +95,7 @@ Las técnicas aplicadas para las inyecciones de dependencias son:
 
 ## Funcionalidades de la app 
 
-En términos generales la aplicación las funcionalidades: 
+En términos generales la aplicación tiene las siguientes funcionalidades: 
 
 - Ver los superhéroes más populares (funcionalidad inventada) 
 - Ver todos los superhéroes de Marvel 
