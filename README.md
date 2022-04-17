@@ -65,7 +65,7 @@ Para las características del proyecto Marvel he decidido implementar un patrón
 
 <img src="README_FILES/mvp.png" alt="Model-View-Presenter" width="450" />
 
-En cualquier caso, se implementa desacopladas que permita a futuro cambiar el patrón de arquitectura sin afectar demasiado el funcionamiento. 
+En cualquier caso, se implementan los componentes de forma desacoplada que permita a futuro cambiar el patrón de arquitectura sin afectar demasiado el funcionamiento. 
 
 
 ## Principios SOLID 
@@ -76,7 +76,7 @@ En el caso de proyecto Marvel he aplicado algunas de las importantes recomendaci
 
 - **Principio de responsabilidad única:** Evito en el proyecto construir objetos extensos con más de una responsabilidad. Siempre diseñaremos objetos con una funcionalidad muy concreta y que se pueda desarrollar en una cantidad de código aceptable. Si fuese muy grande la funcionalidad sería mejor separarla en varias. 
 
-- **Principio de Open-Close:** Las clases del proyecto basados en este principio siempre serán Cerradas a modificaciones, pero Abiertas a extensiones. Siempre se extenderán objetos para nuevas funcionalidades de forma tal que se mantenga la simplicidad del objeto original. Entre otras cosas esto nos permitirá que nos posibles refactors no impliquen afectaciones en muchas partes del proyecto. 
+- **Principio de Open-Close:** Las clases del proyecto basados en este principio siempre serán Cerradas a modificaciones, pero Abiertas a extensiones. Siempre se extenderán objetos para nuevas funcionalidades de forma tal que se mantenga la simplicidad del objeto original. Entre otras cosas esto nos permitirá que los posibles refactors no impliquen afectaciones en muchas partes del proyecto. 
 
 - **Principio de Alta cohesión y bajo acoplamiento:** Es importante que los objetos del proyecto actúen como piezas dentro de un engranaje perfecto en el software. Pero siempre vigilamos que la interacción entre estas piezas evite el acoplamiento fuerte entre ellas. Esto me permitirá en determinados momentos modificar incluso sustituir las piezas sin demasiado problemas. Para conseguir esto implemento objetos de interfaces, que actúen como contratos que conecten las distintas capas. 
 
@@ -95,7 +95,7 @@ Las técnicas aplicadas para las inyecciones de dependencias son:
 
 ## Funcionalidades de la app 
 
-En términos generales la aplicación las funcionalidades: 
+En términos generales la aplicación tiene las siguientes funcionalidades: 
 
 - Ver los superhéroes más populares (funcionalidad inventada) 
 - Ver todos los superhéroes de Marvel 
@@ -163,7 +163,7 @@ En el proyecto Marvel he creado 3 grupos de pruebas:
 
 - **Pruebas rápidas:** Conjunto de pruebas unitarias que establecen criterios de validación para el funcionamiento de componentes de forma unitaria. En otras palabras, contienen lógicas de simulación del entorno para probar de forma independiente los principales componentes de código del software. Se clasifican como pruebas rápidas ya que se pueden ejecutar el conjunto de pruebas en un tiempo razonable sin depender de tiempos de espera externos a la aplicación. 
 
-- **Pruebas lentas:** Conjunto de pruebas unitarias que establecen criterios de validación para el funcionamiento de varios componentes interconectados. La principal diferencia de las pruebas lentas y las rápidas radica en que en las pruebas rápidas no existe entorno simulado, sino que se intenta realizar conexiones reales y por lo tanto hay dependencia de los tiempos de respuesta de servicios externos. Si bien no son el sistema de pruebas más recomendado ya que exige tener conexión real a las APIs y contaminan el entorno de trabajo, en ocasiones pueden ser útiles. Como el desarrollo de Marvel es un ejemplo académico he decidido incluir algunas. 
+- **Pruebas lentas:** Conjunto de pruebas unitarias que establecen criterios de validación para el funcionamiento de varios componentes interconectados. La principal diferencia de las pruebas lentas y las rápidas radica en que en las pruebas lentas no existe entorno simulado, sino que se intenta realizar conexiones reales y por lo tanto hay dependencia de los tiempos de respuesta de servicios externos. Si bien no son el sistema de pruebas más recomendado ya que exige tener conexión real a las APIs y contaminan el entorno de trabajo, en ocasiones pueden ser útiles. Como el desarrollo de Marvel es un ejemplo académico he decidido incluir algunas. 
 
 - **Pruebas de interfaz:** Como su nombre lo indica tienen como objetivo probar los elementos de interacciones del usuario de forma automatizada. Como el desarrollo de Marvel es un ejemplo sencillo de 2 pantallas con pocas interacciones y navegaciones no salen muchos casos de pruebas de este tipo. 
 
