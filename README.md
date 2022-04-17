@@ -65,7 +65,7 @@ Para las características del proyecto Marvel he decidido implementar un patrón
 
 <img src="README_FILES/mvp.png" alt="Model-View-Presenter" width="450" />
 
-En cualquier caso, se implementa desacopladas que permita a futuro cambiar el patrón de arquitectura sin afectar demasiado el funcionamiento. 
+En cualquier caso, se implementan los compopnentes de forma desacoplada que permita a futuro cambiar el patrón de arquitectura sin afectar demasiado el funcionamiento. 
 
 
 ## Principios SOLID 
