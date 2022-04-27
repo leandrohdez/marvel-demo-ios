@@ -1,9 +1,6 @@
 //
 //  ServiceLocator.swift
-//  2gether
 //
-//  Created by 2gether on 27/3/18.
-//  Copyright © 2018 2gether Team. All rights reserved.
 //
 
 import Foundation
